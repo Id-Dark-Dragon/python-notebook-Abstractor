@@ -1,0 +1,1885 @@
+<!DOCTYPE html>
+<!-- saved from url=(0131)file:///E:/Tutorials/Code%20The%20Complete%20Python%20Pro%20Bootcamp%202022/Python%20Notebook/Python%20Notebook.html#Beautiful-Soup -->
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+    <title>Python Notebook</title>
+    <style>
+        body {
+            padding: 5% 10% 5% 10%;
+        }
+
+        li, p {
+            font-size: 1.3rem;
+        }
+
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+
+        h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3rem;
+        }
+
+        code {
+            background-color: #a68ec1;
+            font-size: 1.2rem;
+            margin: 0 50px;
+            display: block;
+            padding: 0 15px;
+        }
+
+        h3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        #myBtn {
+            display: none; /* Hidden by default */
+            position: fixed; /* Fixed/sticky position */
+            bottom: 20px; /* Place the button at the bottom of the page */
+            right: 30px; /* Place the button 30px from the right */
+            z-index: 99; /* Make sure it does not overlap */
+            border: none; /* Remove borders */
+            outline: none; /* Remove outline */
+            background-color: red; /* Set a background color */
+            color: white; /* Text color */
+            cursor: pointer; /* Add a mouse pointer on hover */
+            padding: 15px; /* Some padding */
+            border-radius: 10px; /* Rounded corners */
+            font-size: 18px; /* Increase font size */
+        }
+
+        #myBtn:hover {
+            background-color: #555; /* Add a dark-grey background on hover */
+        }
+    </style>
+</head>
+
+
+<body class="light-mode">
+
+<h1>Python Notebook</h1>
+<button onclick="darkMode()">Darkmode</button>
+<button onclick="lightMode()">LightMode</button>
+<button onclick="topFunction()" id="myBtn" title="Go to top" style="display: block;">Top</button>
+
+<!--Packages list-->
+<div>
+    <ul>
+        <li><h2><a  target="_blank" 
+                href="file:///E:/Tutorials/Code%20The%20Complete%20Python%20Pro%20Bootcamp%202022/Python%20Notebook/Python%20Notebook.html#Packages">Packages</a>
+        </h2></li>
+        <li>
+            <a  target="_blank"  href="file:///E:/Tutorials/Code%20The%20Complete%20Python%20Pro%20Bootcamp%202022/Python%20Notebook/Python%20Notebook.html#Beautiful-Soup">Beautiful
+                Soup</a>
+        </li>
+        <li>
+            <a  target="_blank"  href="file:///E:/Tutorials/Code%20The%20Complete%20Python%20Pro%20Bootcamp%202022/Python%20Notebook/Python%20Notebook.html#Selenium">Selenium</a>
+        </li>
+        <li>
+            <a  target="_blank"  href="file:///E:/Tutorials/Code%20The%20Complete%20Python%20Pro%20Bootcamp%202022/Python%20Notebook/Python%20Notebook.html#Matplotlib">Matplotlib</a>
+        </li>
+        <li>
+            <a  target="_blank"  href="file:///E:/Tutorials/Code%20The%20Complete%20Python%20Pro%20Bootcamp%202022/Python%20Notebook/Python%20Notebook.html#Pandas">Pandas</a>
+        </li>
+        <li>
+            <a  target="_blank"  href="file:///E:/Tutorials/Code%20The%20Complete%20Python%20Pro%20Bootcamp%202022/Python%20Notebook/Python%20Notebook.html#os">OS</a>
+        </li>
+        <li>
+            <a  target="_blank"  href="file:///E:/Tutorials/Code%20The%20Complete%20Python%20Pro%20Bootcamp%202022/Python%20Notebook/Python%20Notebook.html#Pipreqs">Pipreqs</a>
+        </li>
+        <li>
+            <a  target="_blank"  href="file:///E:/Tutorials/Code%20The%20Complete%20Python%20Pro%20Bootcamp%202022/Python%20Notebook/Python%20Notebook.html#Flask">Flask</a>
+        </li>
+        <li>
+            <a  target="_blank"  href="file:///E:/Tutorials/Code%20The%20Complete%20Python%20Pro%20Bootcamp%202022/Python%20Notebook/Python%20Notebook.html#Flask_CKEditor">Flask_CKEditor</a>
+        </li>
+        <li>
+            <a  target="_blank"  href="file:///E:/Tutorials/Code%20The%20Complete%20Python%20Pro%20Bootcamp%202022/Python%20Notebook/Python%20Notebook.html#Flask_Gravatar">Flask_Gravatar</a>
+        </li>
+        <li>
+            <a  target="_blank"  href="file:///E:/Tutorials/Code%20The%20Complete%20Python%20Pro%20Bootcamp%202022/Python%20Notebook/Python%20Notebook.html#Flask-SQLAlchemy">Flask-SQLAlchemy</a>
+        </li>
+        <li>
+            <a  target="_blank"  href="file:///E:/Tutorials/Code%20The%20Complete%20Python%20Pro%20Bootcamp%202022/Python%20Notebook/Python%20Notebook.html#Flask(request)">Flask(request)</a>
+        </li>
+        <li>
+            <a  target="_blank"  href="file:///E:/Tutorials/Code%20The%20Complete%20Python%20Pro%20Bootcamp%202022/Python%20Notebook/Python%20Notebook.html#Flask-WTF">Flask-WTF</a>
+        </li>
+        <li>
+            <a  target="_blank"  href="file:///E:/Tutorials/Code%20The%20Complete%20Python%20Pro%20Bootcamp%202022/Python%20Notebook/Python%20Notebook.html#JSON">JSON</a>
+        </li>
+        <li>
+            <a  target="_blank"  href="file:///E:/Tutorials/Code%20The%20Complete%20Python%20Pro%20Bootcamp%202022/Python%20Notebook/Python%20Notebook.html#Jinja">Jinja</a>
+        </li>
+        <li>
+            <a  target="_blank"  href="file:///E:/Tutorials/Code%20The%20Complete%20Python%20Pro%20Bootcamp%202022/Python%20Notebook/Python%20Notebook.html#Flask-Login">Flask-Login</a>
+        </li>
+        <li>
+            <a  target="_blank"  href="file:///E:/Tutorials/Code%20The%20Complete%20Python%20Pro%20Bootcamp%202022/Python%20Notebook/Python%20Notebook.html#Werkzeug">Werkzeug</a>
+        </li>
+    </ul>
+
+
+    <!--Python Mechanisms list-->
+    <ul>
+        <li><h2><a  target="_blank" 
+                href="file:///E:/Tutorials/Code%20The%20Complete%20Python%20Pro%20Bootcamp%202022/Python%20Notebook/Python%20Notebook.html#Python-Mechanisms">Python
+            Mechanisms</a></h2></li>
+
+        <li>
+            <a  target="_blank"  href="file:///E:/Tutorials/Code%20The%20Complete%20Python%20Pro%20Bootcamp%202022/Python%20Notebook/Python%20Notebook.html#get%20hold%20of%20values%20of%20Function%20variables(local)%20and%20nested%20functions">Get
+                hold of values of Function variables(local) and nested functions</a></li>
+
+        <li>
+            <a  target="_blank"  href="file:///E:/Tutorials/Code%20The%20Complete%20Python%20Pro%20Bootcamp%202022/Python%20Notebook/Python%20Notebook.html#Python%20Decorators">Python
+                Decorators</a></li>
+
+
+    </ul>
+
+    <!--Programming Mechanisms list-->
+    <ul>
+        <li><h2><a  target="_blank" 
+                href="file:///E:/Tutorials/Code%20The%20Complete%20Python%20Pro%20Bootcamp%202022/Python%20Notebook/Python%20Notebook.html#Programming-Mechanisms">Programming
+            Mechanisms</a></h2></li>
+
+        <li>
+            <a  target="_blank"  href="file:///E:/Tutorials/Code%20The%20Complete%20Python%20Pro%20Bootcamp%202022/Python%20Notebook/Python%20Notebook.html#Github">GitHub</a>
+        </li>
+
+        <li>
+            <a  target="_blank"  href="file:///E:/Tutorials/Code%20The%20Complete%20Python%20Pro%20Bootcamp%202022/Python%20Notebook/Python%20Notebook.html#Terminal%20Commands">Terminal
+                Commands</a></li>
+    </ul>
+</div>
+
+
+<!--Start of packages section-->
+
+<section id="Packages">
+    <h1>Packages</h1>
+    <section id="Beautiful-Soup">
+        <hr>
+        <h3>Beautiful Soup</h3>
+        <p>Beautiful Soup is a Python library for pulling data out of HTML and XML files. It works with your favorite
+            parser to provide idiomatic ways of navigating, searching, and modifying the parse tree.&nbsp;<a  target="_blank" 
+                    href="https://beautiful-soup-4.readthedocs.io/en/latest/" style="font-size: 1.3rem;">docs</a><span
+                    style="font-size: 1.3rem;">&nbsp; &nbsp;</span></p>
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><pre
+                style="color: rgb(187, 187, 187); font-family: &quot;JetBrains Mono&quot;, monospace;"><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><span
+                style="color:#d55fde;font-style:italic;">from </span>bs4 <span style="color:#d55fde;font-style:italic;">import </span>BeautifulSoup<br><br><span
+                style="color:#5c6370;font-style:italic;">#Alternative parsing module<br></span><span
+                style="color:#d55fde;font-style:italic;">import </span>lxml</pre></pre></pre></pre></pre>
+        <p>First, we need to extract the websites codes:</p>
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><pre
+                style="color: rgb(187, 187, 187); font-family: &quot;JetBrains Mono&quot;, monospace;"><span
+                style="color:#d55fde;font-style:italic;">with </span><span style="color:#2bbac5;">open</span>(<span
+                style="color:#89ca78;">"website.html"</span>) <span style="color:#d55fde;font-style:italic;">as </span>file:<br></pre><pre
+                style="color: rgb(187, 187, 187); font-family: &quot;JetBrains Mono&quot;, monospace;">        contents = file.<span
+                style="color: rgb(97, 175, 239);">read</span>()</pre><pre
+                style="color: rgb(187, 187, 187); font-family: &quot;JetBrains Mono&quot;, monospace;"># OR<pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;">website_code = requests.<span
+                style="color: rgb(97, 175, 239);">get</span>(<span style="color: rgb(137, 202, 120);">"https://web.archive.org/web/20200518073855"</span>).text</pre><br></pre></pre></pre>
+        <p>Makeing Soup:</p>
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><pre
+                style="color: rgb(187, 187, 187); font-family: &quot;JetBrains Mono&quot;, monospace;"><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><span
+                style="color:#5c6370;font-style:italic;"><br></span>soup = <span
+                style="color:#61afef;">BeautifulSoup</span>(contents, <span style="color:#d19a66;">parser</span>=<span
+                style="color:#89ca78;">"lxml"</span>) <span style="color:#5c6370;font-style:italic;"># See more parsers on docs. "html.parser" is also popular.</span></pre><br></pre></pre>
+        <p>Some General Guides:</p>
+        <pre style="background-color:#282c34;color:#bbbbbb;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><br><span style="color:#89ca78;">"""Prettify will add indentation to the soup.""" <br></span>soup.<span
+                style="color:#61afef;">prettify</span>()<br><br>___________________________<br><span
+                style="color:#89ca78;">''' You can access the first tag of any kind by using .p or .a or .h1 etc.'''<br></span>soup.title<br><span
+                style="color:#5c6370;font-style:italic;"># &lt;title&gt;The Dormouse's story&lt;/title&gt;<br></span><span
+                style="color:#5c6370;font-style:italic;"><br></span>soup.title.name<br><span
+                style="color:#5c6370;font-style:italic;"># u'title'<br></span><span
+                style="color:#5c6370;font-style:italic;"><br></span>soup.title.string<br><span
+                style="color:#5c6370;font-style:italic;"># u'The Dormouse's story'<br></span><span
+                style="color:#5c6370;font-style:italic;"><br></span>soup.title.parent.name<br><span
+                style="color:#5c6370;font-style:italic;"># u'head'<br></span><span
+                style="color:#5c6370;font-style:italic;"><br></span><span style="color:#5c6370;font-style:italic;"><br></span>soup.p<br><span
+                style="color:#5c6370;font-style:italic;"># &lt;p class="title"&gt;&lt;b&gt;The Dormouse's story&lt;/b&gt;&lt;/p&gt;<br></span><span
+                style="color:#5c6370;font-style:italic;"><br></span>soup.p[<span
+                style="color:#89ca78;">'class'</span>]<br><span style="color:#5c6370;font-style:italic;"># u'title'<br></span><span
+                style="color:#5c6370;font-style:italic;"><br></span>soup.a<br><span
+                style="color:#5c6370;font-style:italic;"># &lt;a class="sister" href="http://example.com/elsie" id="link1"&gt;Elsie&lt;/a&gt;<br></span><span
+                style="color:#5c6370;font-style:italic;"><br></span>___________________________<br><span
+                style="color:#89ca78;">"""Getting all the texts from page"""<br></span>soup.<span
+                style="color:#61afef;">get_text</span>()<br><br>___________________________<br><span
+                style="color:#89ca78;">''' You can create a list of all occurrences of tag with find_all() '''<br></span>soup.<span
+                style="color:#61afef;">find_all</span>(<span style="color:#89ca78;">'a'</span>)<br><span
+                style="color:#5c6370;font-style:italic;"># [&lt;a class="sister" href="http://example.com/elsie" id="link1"&gt;Elsie&lt;/a&gt;,<br></span><span
+                style="color:#5c6370;font-style:italic;">#  &lt;a class="sister" href="http://example.com/tillie" id="link3"&gt;Tillie&lt;/a&gt;]<br></span><span
+                style="color:#5c6370;font-style:italic;"><br></span>all_anchor_tags = soup.<span style="color:#61afef;">find_all</span>(<span
+                style="color:#d19a66;">name</span>=<span style="color:#89ca78;">"a"</span>)<br><span
+                style="color:#d55fde;font-style:italic;">for </span>tag <span style="color:#d55fde;font-style:italic;">in </span>all_anchor_tags:<br>    <span
+                style="color:#5c6370;font-style:italic;"># getText() gets the text in the tag.<br></span><span
+                style="color:#5c6370;font-style:italic;">    </span><span style="color:#2bbac5;">print</span>(tag.<span
+                style="color:#61afef;">getText</span>())<br>    <span style="color:#5c6370;font-style:italic;"># get() can get the value of any tag attribute.<br></span><span
+                style="color:#5c6370;font-style:italic;">    </span><span style="color:#2bbac5;">print</span>(tag.<span
+                style="color:#61afef;">get</span>(<span style="color:#89ca78;">"href"</span>))<br><br>___________________________<br><span
+                style="color:#89ca78;">''' find() works like find_all() but just gets the first occurrence.'''<br></span>soup.<span
+                style="color:#61afef;">find</span>(<span style="color:#d19a66;">id</span>=<span style="color:#89ca78;">"link3"</span>)<br><span
+                style="color:#5c6370;font-style:italic;"># &lt;a class="sister" href="http://example.com/tillie" id="link3"&gt;Tillie&lt;/a&gt;<br></span><span
+                style="color:#5c6370;font-style:italic;"><br></span><span style="color:#5c6370;font-style:italic;">#You can also find by class_ name.<br></span>section_heading = soup.<span
+                style="color:#61afef;">find</span>(<span style="color:#d19a66;">name</span>=<span
+                style="color:#89ca78;">"h3"</span>, <span style="color:#d19a66;">class_</span>=<span
+                style="color:#89ca78;">"heading"</span>)<br><br>___________________________<br><span
+                style="color:#89ca78;">'''find() can be chained with other find()s.'''<br></span>soup.<span
+                style="color:#61afef;">find</span>(<span style="color:#89ca78;">"head"</span>).<span
+                style="color:#61afef;">find</span>(<span style="color:#89ca78;">"title"</span>)<br><span
+                style="color:#5c6370;font-style:italic;"># &lt;title&gt;The Dormouse's story&lt;/title&gt;<br></span><span
+                style="color:#5c6370;font-style:italic;"><br></span>___________________________<br><span
+                style="color:#89ca78;">'''You can also find by using a CSS Selector:'''<br></span>soup.<span
+                style="color:#61afef;">select_one</span>(<span style="color:#d19a66;">selector</span>=<span
+                style="color:#89ca78;">".company a"</span>)<br>soup.<span style="color:#61afef;">select</span>(<span
+                style="color:#89ca78;">"a"</span>)<br></pre><span
+                style="color:#5c6370;font-style:italic;"><br></span></pre>
+        <p><br></p>
+
+    </section>
+    <section id="Selenium">
+        <hr>
+        <h3>Selenium</h3>
+        <p>Selenium is a popular open-source testing tool used for automating web browsers. It provides a way to
+            automate browser actions such as navigating to a website, clicking on elements, filling out forms, and more.
+            It is also available as a software.&nbsp;&nbsp;<a  target="_blank"  href="https://selenium-python.readthedocs.io/index.html"
+                                                              style="font-size: 1.3rem;">docs</a><span
+                    style="font-size: 1.3rem;">&nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+            </span><a  target="_blank"  href="https://www.selenium.dev/selenium/docs/api/py/api.html" style="font-size: 1.3rem;">docs</a>
+        </p>
+        <p>&nbsp;How to start:</p>
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><pre
+                style="color: rgb(187, 187, 187); font-family: &quot;JetBrains Mono&quot;, monospace;"><span
+                style="color:#5c6370;font-style:italic;"># Basic Imports<br></span><span
+                style="color:#d55fde;font-style:italic;">from </span>selenium <span
+                style="color:#d55fde;font-style:italic;">import </span>webdriver<br><span
+                style="color:#d55fde;font-style:italic;">from </span>time <span
+                style="color:#d55fde;font-style:italic;">import </span>sleep<br><span
+                style="color:#d55fde;font-style:italic;">from </span>selenium.webdriver.common.by <span
+                style="color:#d55fde;font-style:italic;">import </span>By<br><span
+                style="color:#d55fde;font-style:italic;">from </span>selenium.webdriver.common.keys <span
+                style="color:#d55fde;font-style:italic;">import </span>Keys<br><span
+                style="color:#d55fde;font-style:italic;">from </span>selenium.common.exceptions <span
+                style="color:#d55fde;font-style:italic;">import </span>NoSuchElementException</pre><pre
+                style="color: rgb(187, 187, 187); font-family: &quot;JetBrains Mono&quot;, monospace;"><br></pre></pre></pre></pre>
+        <pre style="background-color:#282c34;color:#bbbbbb;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><br>PATH_WEBDRIVER = <span
+                style="color:#89ca78;">'C:\DEVELOPMENT\msedgedriver.exe'<br></span><span
+                style="color:#89ca78;"><br></span><span style="color:#5c6370;font-style:italic;"># Adding webdriver settings(arguments) before initializing it.<br></span>opt = webdriver.<span
+                style="color:#61afef;">EdgeOptions</span>()<br><br><span style="color:#5c6370;font-style:italic;"># Some Basic Arguments<br></span>opt.<span
+                style="color:#61afef;">add_argument</span>(<span style="color:#89ca78;">"start-maximized"</span>)<br>opt.<span
+                style="color:#61afef;">add_argument</span>(<span style="color:#89ca78;">"disable-infobars"</span>)<br>opt.<span
+                style="color:#61afef;">add_argument</span>(<span
+                style="color:#89ca78;">"--disable-extensions"</span>)<br><br><span
+                style="color:#5c6370;font-style:italic;"># Starting the Driver and opening website page<br></span>bot = webdriver.<span
+                style="color:#61afef;">Edge</span>(<span
+                style="color:#d19a66;">executable_path</span>=PATH_WEBDRIVER, <span
+                style="color:#d19a66;">options</span>=opt)<br>bot.<span style="color:#61afef;">get</span>(<span
+                style="color:#89ca78;">'https://sida.medu.ir/#/login'</span>)<br><br></pre>
+        <p>You may need some waits before all the elements in the page get loaded.&nbsp; &nbsp; <a  target="_blank" 
+                href="https://selenium-python.readthedocs.io/waits.html">read more</a></p>
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><pre
+                style="color: rgb(187, 187, 187); font-family: &quot;JetBrains Mono&quot;, monospace;"><br><span
+                style="color:#5c6370;font-style:italic;"># Explicit Waits: wait for a special element to get loaded.<br></span><span
+                style="color:#d55fde;font-style:italic;">from </span>selenium.webdriver.support.wait <span
+                style="color:#d55fde;font-style:italic;">import </span>WebDriverWait<br><span
+                style="color:#d55fde;font-style:italic;">from </span>selenium.webdriver.support <span
+                style="color:#d55fde;font-style:italic;">import </span>expected_conditions <span
+                style="color:#d55fde;font-style:italic;">as </span>EC<br><br>driver.<span
+                style="color:#61afef;">get</span>(<span style="color:#89ca78;">"http://somedomain/url_that_delays_loading"</span>)<br>element = <span
+                style="color:#61afef;">WebDriverWait</span>(driver, <span style="color:#d19a66;">10</span>).<span
+                style="color:#61afef;">until</span>(EC.<span style="color:#61afef;">presence_of_element_located</span>((By.ID, <span
+                style="color:#89ca78;">"myDynamicElement"</span>)))<br><br><span
+                style="color:#5c6370;font-style:italic;"># Implicit Waits: just wait for a certain time.<br></span>driver.<span
+                style="color:#61afef;">implicitly_wait</span>(<span style="color:#d19a66;">10</span>)<br>driver.<span
+                style="color:#61afef;">get</span>(<span style="color:#89ca78;">"http://somedomain/url_that_delays_loading"</span>)<br><br><span
+                style="color:#5c6370;font-style:italic;"># Third and Easiest method<br></span>time.<span
+                style="color:#61afef;">sleep</span>(<span style="color:#d19a66;">10</span>)<br><br></pre></pre></pre>
+        <p>Finding Elements:</p>
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><pre
+                style="color: rgb(187, 187, 187); font-family: &quot;JetBrains Mono&quot;, monospace;"><br><span
+                style="color:#61afef;">find_element</span>(By.ID, <span style="color:#89ca78;">"id"</span>)<br><span
+                style="color:#61afef;">find_element</span>(By.NAME, <span style="color:#89ca78;">"name"</span>)<br><span
+                style="color:#61afef;">find_element</span>(By.XPATH, <span style="color:#89ca78;">"xpath"</span>)  <span
+                style="color:#5c6370;font-style:italic;"># Full XPATH is usually the best.<br></span><span
+                style="color:#61afef;">find_element</span>(By.LINK_TEXT, <span style="color:#89ca78;">"link text"</span>)<br><span
+                style="color:#61afef;">find_element</span>(By.PARTIAL_LINK_TEXT, <span style="color:#89ca78;">"partial link text"</span>)<br><span
+                style="color:#61afef;">find_element</span>(By.TAG_NAME, <span
+                style="color:#89ca78;">"tag name"</span>)<br><span style="color:#61afef;">find_element</span>(By.CLASS_NAME, <span
+                style="color:#89ca78;">"class name"</span>)<br><span style="color:#61afef;">find_element</span>(By.CSS_SELECTOR, <span
+                style="color:#89ca78;">"css selector"</span>)<br><br><span style="color:#5c6370;font-style:italic;"># "find_elements" is also a method to give you multiple elements in a list (object type).<br></span><span
+                style="color:#5c6370;font-style:italic;"># it is better to be used chaining with "find_element" <br></span>main_div = bot.<span
+                style="color:#61afef;">find_element</span>(By.XPATH, <span style="color:#89ca78;">'/html/body/div[1]/div/div/div/div[2]'</span>)<br>divs = main_div.<span
+                style="color:#61afef;">find_elements</span>(By.XPATH, <span style="color:#89ca78;">'div'</span>)<br><br></pre></pre>
+        <p>Functions with elements:</p>
+        <pre style="background-color:#282c34;color:#bbbbbb;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;">form = bot.<span
+                style="color:#61afef;">find_element</span>(By.ID, <span style="color:#d19a66;">value</span>=<span
+                style="color:#89ca78;">'userName'</span>)<br><br>form.<span style="color:#61afef;">click</span>()<br>form.<span
+                style="color:#61afef;">send_keys</span>(<span style="color:#89ca78;">"12345"</span>)<br>form.<span
+                style="color:#61afef;">send_keys</span>(Keys.RETURN)  <span style="color:#5c6370;font-style:italic;"># You can use any keyboard keys, see Special Keys in the docs<br></span><span
+                style="color:#5c6370;font-style:italic;"><br></span></pre>
+        <p><br></p>
+        <p><span style="font-size: 1.3rem;">SOME ARGUMENTS You can use:</span><br></p>
+        <pre style="background-color:#282c34;color:#bbbbbb;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><br><span style="color:#89ca78;">""" Use your own browser profiles """<br></span><span
+                style="color:#5c6370;font-style:italic;"># Check the location in "edge://version"<br></span>PATH_TO_BROWSER_PROFILE = <span
+                style="color:#89ca78;">r'C:\Users\FaMiLy\...\Profile 2'<br></span>opt.<span style="color:#61afef;">add_argument</span>(<span
+                style="color:#89ca78;">f"user-data-dir=</span><span style="color:#2bbac5;">{</span>PATH_TO_BROWSER_PROFILE<span
+                style="color:#2bbac5;">}</span><span style="color:#89ca78;">"</span>)<br><br><br><span
+                style="color:#89ca78;">""" Your Selenium bot can stay more undetected as a bot with these args. """<br></span><span
+                style="color:#89ca78;"><br></span>options.<span style="color:#61afef;">add_argument</span>(<span
+                style="color:#89ca78;">'--no-sandbox'</span>)<br><span style="color:#5c6370;font-style:italic;"># This argument tells Chrome to run without its sandbox security feature,<br></span><span
+                style="color:#5c6370;font-style:italic;"># which can be useful when running automated tests on a machine with limited resources or in a virtualized environment.<br></span><span
+                style="color:#5c6370;font-style:italic;"><br></span>options.<span
+                style="color:#61afef;">add_argument</span>(<span
+                style="color:#89ca78;">'--single-process'</span>)<br><span style="color:#5c6370;font-style:italic;"># This argument tells Chrome to run in single-process mode,<br></span><span
+                style="color:#5c6370;font-style:italic;"># which can help with memory usage but may also impact performance.<br></span><span
+                style="color:#5c6370;font-style:italic;"><br></span>options.<span
+                style="color:#61afef;">add_argument</span>(<span style="color:#89ca78;">'--disable-dev-shm-usage'</span>)<br><span
+                style="color:#5c6370;font-style:italic;"># This argument disables the use of /dev/shm for temporary file storage,<br></span><span
+                style="color:#5c6370;font-style:italic;"># which can improve performance when working with large datasets.<br></span><span
+                style="color:#5c6370;font-style:italic;"><br></span>options.add_argument(<span style="color:#89ca78;">'--disable-blink-features=AutomationControlled'</span>):<br><span
+                style="color:#5c6370;font-style:italic;"># This argument disables the AutomationControlled feature in the Chrome browser,<br></span><span
+                style="color:#5c6370;font-style:italic;"># which can help prevent certain types of automated scripts from running.<br></span><span
+                style="color:#5c6370;font-style:italic;"><br></span>options.add_experimental_option(<span
+                style="color:#89ca78;">'useAutomationExtension'</span>, <span style="color:#d55fde;font-style:italic;">False</span>):<br><span
+                style="color:#5c6370;font-style:italic;"># This experimental option disables the Chrome automation extension,<br></span><span
+                style="color:#5c6370;font-style:italic;"># which is used by some automated testing frameworks.<br></span><span
+                style="color:#5c6370;font-style:italic;"><br></span>options.add_experimental_option(<span
+                style="color:#89ca78;">"excludeSwitches"</span>, [<span
+                style="color:#89ca78;">"enable-automation"</span>]):<br><span style="color:#5c6370;font-style:italic;"># This experimental option excludes the enable-automation switch,<br></span><span
+                style="color:#5c6370;font-style:italic;"># which is often used by websites to detect automated browser activity.<br></span><span
+                style="color:#5c6370;font-style:italic;"><br></span>options.add_argument(<span style="color:#89ca78;">'Inspect &gt; More Tools &gt; Network Conditions'</span>):<br><span
+                style="color:#5c6370;font-style:italic;"># This argument sets the user agent string for the Chrome browser,<br></span><span
+                style="color:#5c6370;font-style:italic;"># which can be useful for testing how websites behave under different browser conditions<br></span><span
+                style="color:#5c6370;font-style:italic;"><br></span>options.<span
+                style="color:#61afef;">add_argument</span>(<span style="color:#89ca78;">'--proxy-server=%s' </span>% ip)<br><span
+                style="color:#5c6370;font-style:italic;"># This command-line argument sets the proxy server for the Chrome browser</span></pre></pre>
+
+    </section>
+    <section id="Matplotlib">
+        <hr>
+        <h3>Matplotlib</h3>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;">Matplotlib is a comprehensive Python library for
+            creating static, animated, and interactive visualizations.&nbsp;<a  target="_blank" 
+                    href="https://matplotlib.org/stable/index.html">
+                Docs (and cheatsheets)</a></p>
+        <pre style="background-color:#282c34;color:#bbbbbb;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><span
+                style="color:#d55fde;font-style:italic;">import </span>matplotlib.pyplot <span
+                style="color:#d55fde;font-style:italic;">as </span>plt</pre>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;">CHARTS:</p>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;">we can make data charts and graphs by using the
+            combination of Pandas and Matplotlib.&nbsp;<span style="font-size: 1.3rem;">First, see some unnecessary configurations:</span>
+        </p>
+        <pre style="background-color:#282c34;color:#bbbbbb;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><br>plt.<span
+                style="color:#61afef;">figure</span>(<span style="color:#d19a66;">figsize</span>=(<span
+                style="color:#d19a66;">20</span>,<span style="color:#d19a66;">10</span>))            <span
+                style="color:#5c6370;font-style:italic;"># Size of graph.<br></span>plt.<span style="color:#61afef;">xticks</span>(<span
+                style="color:#d19a66;">fontsize</span>=<span style="color:#d19a66;">14, rotation=45</span>)   <span
+                style="color:#5c6370;font-style:italic;"># x (and y below) ticks settings.<br></span>plt.<span
+                style="color:#61afef;">yticks</span>(<span style="color:#d19a66;">fontsize</span>=<span
+                style="color:#d19a66;">14</span>)<br>plt.<span style="color:#61afef;">ylabel</span>(<span
+                style="color:#89ca78;">"popularity"</span>,<span style="color:#d19a66;">fontsize</span>=<span
+                style="color:#d19a66;">16</span>)   <span style="color:#5c6370;font-style:italic;"># x (and y below) label settings.<br></span>plt.<span
+                style="color:#61afef;">xlabel</span>(<span style="color:#89ca78;">"time"</span>, <span
+                style="color:#d19a66;">fontsize</span>=<span style="color:#d19a66;">16</span>)<br>plt.<span
+                style="color:#61afef;">ylim</span>(<span style="color:#d19a66;">0</span>,<span style="color:#d19a66;">35000</span>)                      <span
+                style="color:#5c6370;font-style:italic;"># Range of numbers in axis<br></span><span
+                style="color:#5c6370;font-style:italic;"><br></span></pre>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;">Here is the function to make our chart:</p>
+        <pre style="background-color:#282c34;color:#bbbbbb;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><span
+                style="color:#5c6370;font-style:italic;"># x and y are positional arguments not keyword.<br></span>plt.<span
+                style="color:#61afef;">plot</span>( x , y )                <span
+                style="color:#5c6370;font-style:italic;"># linear graph     <br></span>plt.<span style="color:#61afef;">scatter</span>( x , y )             <span
+                style="color:#5c6370;font-style:italic;"># dotted graph <br></span>plt.<span
+                style="color:#61afef;">bar</span>( x , y )                 <span
+                style="color:#5c6370;font-style:italic;"># bar graph <br></span></pre></pre>
+        <p>To make multiple graphs overlap , we need to make a for loop: (in this eamples we are plotting the popularity
+            of different programming languages from a pandas DF)</p>
+        <pre style="background-color:#282c34;color:#bbbbbb;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><br><span
+                style="color:#d55fde;font-style:italic;">for </span>column <span
+                style="color:#d55fde;font-style:italic;">in </span>df.columns:    <span
+                style="color:#5c6370;font-style:italic;"># here, columns are programming languages names and indexes are dates.          <br></span><span
+                style="color:#5c6370;font-style:italic;">    </span>plt.<span style="color:#61afef;">plot</span>(df.index, df[column], <br>             <span
+                style="color:#d19a66;">linewidth</span>=<span style="color:#d19a66;">3</span>, <span
+                style="color:#d19a66;">label</span>=df[column].name)<br>plt.<span
+                style="color:#61afef;">legend</span>(<span style="color:#d19a66;">fontsize</span>=<span
+                style="color:#d19a66;">16</span>)      <span style="color:#5c6370;font-style:italic;"># this line is for making a guide for our graphs.<br></span><span
+                style="color:#5c6370;font-style:italic;"><br></span></pre>
+        <p>To make our graphs smoother we can use the Rolling Average of values instead of the originals. read about it
+            on Pandas notes.</p>
+        <p>MAKING A CHART WITH TWO Y-AXIS AND ONE X-AXIS:</p>
+        <pre style="background-color:#282c34;color:#bbbbbb;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><br>ax1 = plt.<span
+                style="color:#61afef;">gca</span>()      <span style="color:#5c6370;font-style:italic;"># get current axis<br></span>ax2 = ax1.<span
+                style="color:#61afef;">twinx</span>()    <span style="color:#5c6370;font-style:italic;"># double it<br></span><span
+                style="color:#5c6370;font-style:italic;"><br></span>ax1.<span
+                style="color:#61afef;">set_xlabel</span>(<span style="color:#89ca78;">'year'</span>)<br>ax1.<span
+                style="color:#61afef;">set_ylabel</span>(<span style="color:#89ca78;">"Theme by year"</span>, <span
+                style="color:#d19a66;">fontsize</span>=<span style="color:#d19a66;">14</span>, <span
+                style="color:#d19a66;">color</span>=<span style="color:#89ca78;">"b"</span>)<br>ax2.<span
+                style="color:#61afef;">set_ylabel</span>(<span style="color:#89ca78;">'parts number'</span>, <span
+                style="color:#d19a66;">fontsize</span>=<span style="color:#d19a66;">14</span>, <span
+                style="color:#d19a66;">color</span>=<span style="color:#89ca78;">"g"</span>)<br><br>ax1.<span
+                style="color:#61afef;">plot</span>(year.index, year[<span style="color:#89ca78;">"theme"</span>], <span
+                style="color:#d19a66;">color</span>=<span style="color:#89ca78;">"blue"</span>)<br>ax2.<span
+                style="color:#61afef;">plot</span>(df.index, df.num_parts, <span
+                style="color:#d19a66;">color</span>=<span style="color:#89ca78;">"green"</span>)<br></pre>
+
+    </section>
+    <section id="Pandas">
+        <hr>
+        <h3>Pandas</h3>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;">Pandas is a library to work professionally with table
+            data&nbsp;in python.&nbsp;</p>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;">We work with DataFrames or Series by using this
+            library, so anything should be
+            converted to a DF or Series first: (DF is just your data in the appearance of a table and Series is a column
+            of data, DFs are a collection of Series.)&nbsp;<a  target="_blank"  href="https://pandas.pydata.org/docs">&nbsp;Docs</a></p>
+        <pre style="background-color:#282c34;color:#bbbbbb;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><br>data = pandas.<span
+                style="color:#61afef;">read_csv</span>(<span style="color:#89ca78;">'example.csv'</span>)                          <span
+                style="color:#5c6370;font-style:italic;"># .csv to DataFrame</span></pre><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><span
+                style="color:#5c6370;font-style:italic;"><br></span>df = pd.<span style="color:#61afef;">read_csv</span>(<span
+                style="color:#89ca78;">'example.csv'</span>, <span style="color:#d19a66;">names</span>=[<span
+                style="color:#89ca78;">'DATE'</span>, <span style="color:#89ca78;">'TAG'</span>, <span
+                style="color:#89ca78;">'POSTS'</span>], <span style="color:#d19a66;">header</span>=<span
+                style="color:#d19a66;">0</span>) <br>                                                               <span
+                style="color:#5c6370;font-style:italic;"># giving column names to CSVs that don't have<br></span><br></pre><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;">df = pandas.<span style="color:#61afef;">DataFrame</span>({<span
+                style="color:#89ca78;">'Name'</span>: [<span style="color:#89ca78;">'John'</span>, <span
+                style="color:#89ca78;">'Jane'</span>, <span style="color:#89ca78;">'Jim'</span>, <span
+                style="color:#89ca78;">'Joan'</span>],<br>                    <span style="color:#89ca78;">'Age'</span>: [<span
+                style="color:#d19a66;">32</span>, <span style="color:#d19a66;">28</span>, <span style="color:#d19a66;">40</span>, <span
+                style="color:#d19a66;">38</span>]})                  <span style="color:#5c6370;font-style:italic;"># Dict. to DF. dictionary keys will become column names.<br></span><br></pre><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;">s = pandas.<span style="color:#61afef;">Series</span>([<span
+                style="color:#d19a66;">32</span>, <span style="color:#d19a66;">28</span>, <span style="color:#d19a66;">41</span>, <span
+                style="color:#d19a66;">35</span>], <span style="color:#d19a66;">name</span>=<span
+                style="color:#89ca78;">'Age'</span>)                <span style="color:#5c6370;font-style:italic;"># list to Series<br></span></pre></pre>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;"><br></p>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;">Some methods to explore dataframes (and series):</p>
+        <pre style="background-color:#282c34;color:#bbbbbb;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;">df.<span style="color:#61afef;">head</span>()     <span
+                style="color:#5c6370;font-style:italic;"># first rows<br></span>df.<span
+                style="color:#61afef;">tail</span>()     <span style="color:#5c6370;font-style:italic;"># last rows<br></span>df.shape      <span
+                style="color:#5c6370;font-style:italic;"># find out the number of rows and columns<br></span>df.<span
+                style="color:#61afef;">count</span>()    <span style="color:#5c6370;font-style:italic;"># number of data in a particular section<br></span>df.<span
+                style="color:#61afef;">columns</span>()  <span style="color:#5c6370;font-style:italic;"># the column names<br></span>df.<span
+                style="color:#61afef;">nunique</span>()  <span style="color:#5c6370;font-style:italic;"># tells the number unique values in each series<br></span>df[<span
+                style="color:#d19a66;">0</span>:<span style="color:#d19a66;">70</span>]      <span
+                style="color:#5c6370;font-style:italic;"># slicing can be used in dfs and series<br></span>df.<span
+                style="color:#61afef;">describe</span>() <span style="color:#5c6370;font-style:italic;"># gives a summary of mean, std, max, min ... (this info is also a DF)<br></span>df.<span
+                style="color:#61afef;">min</span>()      <span style="color:#5c6370;font-style:italic;"># also "max" and "idxmax"<br></span><span
+                style="color:#5c6370;font-style:italic;"><br></span>df[<span
+                style="color:#89ca78;">'a column'</span>].<span style="color:#61afef;">sort_values</span>()     <span
+                style="color:#5c6370;font-style:italic;"># sort a column<br></span>df.<span style="color:#61afef;">sort_values</span>(<span
+                style="color:#89ca78;">"a column"</span>)       <span style="color:#5c6370;font-style:italic;"># sort a DF<br></span></pre></pre></pre></pre>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;"><span
+                style="font-size: 20.8px;">Deal With NAN Values:</span></p>
+        <pre style="background-color:#282c34;color:#bbbbbb;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;">df.<span style="color:#61afef;">isna</span>()                  <span
+                style="color:#5c6370;font-style:italic;"># find cells with not provided data<br></span>df.<span
+                style="color:#61afef;">dropna</span>(<span style="color:#d19a66;">inplace</span>=<span
+                style="color:#d55fde;font-style:italic;">True</span>)    <span style="color:#5c6370;font-style:italic;"># delete rows containing cells with no data<br></span>df.<span
+                style="color:#61afef;">isna</span>().values.<span style="color:#61afef;">any</span>()     <span
+                style="color:#5c6370;font-style:italic;"># to see if there is a NAN cell in DF<br></span>df.<span
+                style="color:#61afef;">fillna</span>(<span style="color:#d19a66;">0</span>, <span
+                style="color:#d19a66;">inplace</span>=<span style="color:#d55fde;font-style:italic;">True</span>) <span
+                style="color:#5c6370;font-style:italic;"># Substitute 0 for NAN values<br></span><span
+                style="color:#5c6370;font-style:italic;"><br></span>df[df.<span
+                style="color:#61afef;">isna</span>().<span style="color:#61afef;">any</span>(<span
+                style="color:#d19a66;">axis</span>=<span style="color:#d19a66;">1</span>)]  <span
+                style="color:#5c6370;font-style:italic;"># shows the rows with NANs.<br></span>df[df.<span
+                style="color:#61afef;">notna</span>().<span style="color:#61afef;">any</span>(<span
+                style="color:#d19a66;">axis</span>=<span style="color:#d19a66;">1</span>)]  <span
+                style="color:#5c6370;font-style:italic;"># shows the rows without NANs.</span></pre><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><span
+                style="color:#5c6370;font-style:italic;"><br></span><span style="color:#89ca78;">"""<br></span><span
+                style="color:#89ca78;">The any() function is used to check whether any element is True, potentially over an axis.<br></span><span
+                style="color:#89ca78;">Returns False unless there at least one element within a series or along a Dataframe axis that is True.<br></span><span
+                style="color:#89ca78;"><br></span><span style="color:#89ca78;">one of its important arg: axis Indicate which axis or axes should be reduced.<br></span><span
+                style="color:#89ca78;"><br></span><span style="color:#89ca78;">0 / ‘index’ : reduce the index, return a Series whose index is the original column labels.<br></span><span
+                style="color:#89ca78;">1 / ‘columns’ : reduce the columns, return a Series whose index is the original index.<br></span><span
+                style="color:#89ca78;">None : reduce all axes, return a scalar.</span></pre><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><span
+                style="color:#89ca78;"><br></span><span style="color:#89ca78;">"""</span></pre></pre>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;"><br></p>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;"><span
+                style="font-size: 20.8px;">Getting&nbsp;</span><span style="font-size: 20.8px;">column</span><span
+                style="font-size: 20.8px;">(</span><span style="font-size: 20.8px;">series</span><span
+                style="font-size: 20.8px;">) out of a DF and working with:</span></p>
+        <pre style="background-color:#282c34;color:#bbbbbb;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;">df[<span
+                style="color:#89ca78;">'column name'</span>]        <span style="color:#5c6370;font-style:italic;"># filter special columns<br></span>df[[<span
+                style="color:#89ca78;">'column name 1'</span>, <span
+                style="color:#89ca78;">'column name 2'</span>, <span style="color:#89ca78;">'column name 3'</span>]]<br><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;">df.column     <span
+                style="color:#5c6370;font-style:italic;"># it's the same as the above but can be used for choosing columns with no spaces in their name<br></span></pre><br>df[<span
+                style="color:#89ca78;">'a column'</span>].<span style="color:#61afef;">max</span>()     <span
+                style="color:#5c6370;font-style:italic;"># The largest and smallest values, as well as their positions<br></span><span
+                style="color:#5c6370;font-style:italic;">              </span>.<span style="color:#2bbac5;">min</span>()<br>              .<span
+                style="color:#61afef;">idxmax</span>()<pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><br>df.<span
+                style="color:#61afef;">insert</span>(<span style="color:#d19a66;">5</span>, <span
+                style="color:#89ca78;">'Spread'</span>, spread_col_data)  <span
+                style="color:#5c6370;font-style:italic;"># insert new column<br></span>df[<span style="color:#89ca78;">'new column'</span>] = <span
+                style="color:#d19a66;"> </span>spread_col_data      <span
+                style="color: rgb(92, 99, 112); font-style: italic;"># another way to add a column after other columns in the DF</span></pre><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;">df.<span
+                style="color:#61afef;">rename</span>(<span style="color:#d19a66;">columns</span>={<span
+                style="color:#89ca78;">"old name"</span>:<span style="color:#89ca78;">"new name"</span>}, <span
+                style="color:#d19a66;">inplace</span>= <span
+                style="color:#d55fde;font-style:italic;">True</span>)    <span style="color:#5c6370;font-style:italic;"># rename column's names.</span></pre><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><span
+                style="color:#5c6370;font-style:italic;"><br></span></pre></pre>
+        <pre style="background-color:#282c34;color:#bbbbbb;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"> <br><span
+                style="color:#5c6370;font-style:italic;"># subtract two columns from each other in all rows<br></span>clean_df[<span
+                style="color:#89ca78;">'90th'</span>] - clean_df[<span style="color:#89ca78;">'10th'</span>]<br>clean_df[<span
+                style="color:#89ca78;">'90th'</span>].<span style="color:#61afef;">subtract</span>(clean_df[<span
+                style="color:#89ca78;">'10th'</span>])<br><br></pre>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;"><br></p>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;">ACCESSING&nbsp; ROWS&nbsp; &amp;&nbsp; CELLS&nbsp;
+            &amp;&nbsp; FILTER VALUES:&nbsp; &nbsp;<a  target="_blank" 
+                    href="https://www.listendata.com/2019/07/how-to-filter-pandas-dataframe.html">more...</a></p>
+        <pre style="background-color:#282c34;color:#bbbbbb;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;">df[<span
+                style="color:#89ca78;">'a column'</span>][index]    <span style="color:#5c6370;font-style:italic;"># access individual cells<br></span>df[<span
+                style="color:#89ca78;">'a column'</span>].loc[index]<br><br>df.loc[index or id]   <span
+                style="white-space:pre">	</span>   <span style="color:#5c6370;font-style:italic;"># Accessing a single row<br></span>df.loc[start:stop:step]    <span
+                style="color:#5c6370;font-style:italic;"># Accessing a range of rows</span><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><span
+                style="color:#5c6370;font-style:italic;">#-----FILTERING-----<br></span>df[df.year == <span
+                style="color:#d19a66;">1949</span>]       <span style="color:#5c6370;font-style:italic;"># Give rows with this filter<br></span>df.loc[df.year == <span
+                style="color:#d19a66;">1949</span>]   <span style="color:#5c6370;font-style:italic;"># we can also filter under more conditions, raed in more... <br></span><span
+                style="color:#5c6370;font-style:italic;"><br></span></pre></pre></pre>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;"><br></p>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;">"GROUPBY" is used to split the data into groups based
+            on one or more columns. <a  target="_blank" 
+                    href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.groupby.html?highlight=groupby#pandas.DataFrame.groupby">Doc</a>&nbsp;
+        </p>
+        <pre style="background-color:#282c34;color:#bbbbbb;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><br>df.<span
+                style="color:#61afef;">head</span>()<br><br>                  DATE         TAG  POSTS<br><span
+                style="color:#d19a66;">0  2008</span>-<span style="color:#d19a66;">07</span>-<span
+                style="color:#d19a66;">01 00</span>:<span style="color:#e5c07b;">00</span>:<span style="color:#d19a66;">00          </span>c<span
+                style="color:#5c6370;font-style:italic;">#      3<br></span><span style="color:#d19a66;">1  2008</span>-<span
+                style="color:#d19a66;">08</span>-<span style="color:#d19a66;">01 00</span>:<span style="color:#e5c07b;">00</span>:<span
+                style="color:#d19a66;">00    </span>assembly      <span style="color:#d19a66;">8<br></span><span
+                style="color:#d19a66;">2  2008</span>-<span style="color:#d19a66;">08</span>-<span
+                style="color:#d19a66;">01 00</span>:<span style="color:#e5c07b;">00</span>:<span style="color:#d19a66;">00  </span>javascript    <span
+                style="color:#d19a66;">162<br></span><span style="color:#d19a66;">3  2008</span>-<span
+                style="color:#d19a66;">08</span>-<span style="color:#d19a66;">01 00</span>:<span style="color:#e5c07b;">00</span>:<span
+                style="color:#d19a66;">00           </span>c     <span style="color:#d19a66;">85<br></span><span
+                style="color:#d19a66;">4  2008</span>-<span style="color:#d19a66;">08</span>-<span
+                style="color:#d19a66;">01 00</span>:<span style="color:#e5c07b;">00</span>:<span style="color:#d19a66;">00      </span>python    <span
+                style="color:#d19a66;">124<br></span><span style="color:#d19a66;"><br></span><span
+                style="color:#d19a66;"><br></span>df.<span style="color:#61afef;">groupby</span>(<span
+                style="color:#89ca78;">"TAG"</span>).<span style="color:#61afef;">count</span>()<br>            DATE  POSTS<br>TAG<br>assembly     <span
+                style="color:#d19a66;">144    144<br></span>java         <span
+                style="color:#d19a66;">144    144<br></span>javascript   <span
+                style="color:#d19a66;">144    144<br></span>perl         <span
+                style="color:#d19a66;">144    144<br></span>php          <span
+                style="color:#d19a66;">144    144<br></span>python       <span
+                style="color:#d19a66;">144    144<br></span>...<br><br>df.<span
+                style="color:#61afef;">groupby</span>(<span style="color:#89ca78;">"TAG"</span>)[<span
+                style="color:#89ca78;">"POSTS"</span>].<span style="color:#61afef;">sum</span>()<br>TAG<br>assembly        <span
+                style="color:#d19a66;">34852<br></span>c              <span style="color:#d19a66;">336042<br></span>c++            <span
+                style="color:#d19a66;">684210<br></span>delphi          <span style="color:#d19a66;">46212<br></span>go              <span
+                style="color:#d19a66;">47499<br></span>java          <span style="color:#d19a66;">1696403<br></span>javascript    <span
+                style="color:#d19a66;">2056510<br></span>...<br><br>pandas.options.display.float_format = <span
+                style="color:#89ca78;">'{:,.2f}'</span>.format  <span style="color:#5c6370;font-style:italic;"># make floats look neater.<br></span>df.<span
+                style="color:#61afef;">groupby</span>(<span style="color:#89ca78;">"TAG"</span>)[<span
+                style="color:#89ca78;">'POSTS'</span>].<span style="color:#61afef;">mean</span>()                       <span
+                style="color:#5c6370;font-style:italic;"># gets average<br></span>assembly        <span
+                style="color:#d19a66;">242.03<br></span>c             <span style="color:#d19a66;">2</span>,<span
+                style="color:#d19a66;">333.62<br></span>c++           <span style="color:#d19a66;">4</span>,<span
+                style="color:#d19a66;">751.46<br></span>delphi          <span style="color:#d19a66;">320.92<br></span>go              <span
+                style="color:#d19a66;">368.21<br></span>java         <span style="color:#d19a66;">11</span>,<span
+                style="color:#d19a66;">780.58<br></span>javascript   <span style="color:#d19a66;">14</span>,<span
+                style="color:#d19a66;">281.32<br></span>perl            <span style="color:#d19a66;">453.38<br></span>php           <span
+                style="color:#d19a66;">9</span>,<span style="color:#d19a66;">458.25<br></span>...<br><br></pre>
+        <pre style="background-color:#282c34;color:#bbbbbb;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><br>df.<span
+                style="color:#61afef;">groupby</span>(<span style="color:#89ca78;">"is_trans"</span>).<span
+                style="color:#61afef;">count</span>()   <span style="color:#5c6370;font-style:italic;"># gives the number of data val. in each column.<br></span>df.is_trans.<span
+                style="color:#61afef;">value_counts</span>()       <span style="color:#5c6370;font-style:italic;"># same as the line above, but quicker.<br></span><span
+                style="color:#5c6370;font-style:italic;"><br></span></pre></pre>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;"><br></p>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;">"PIVOT" is used to pivot or reshape a DataFrame by
+            transforming one column's unique values into columns, then grouping the other columns on this new pivoted
+            column. <a  target="_blank" 
+                    href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.pivot.html">Doc</a>
+        </p>
+        <pre style="background-color:#282c34;color:#bbbbbb;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><br>df.<span
+                style="color:#61afef;">head</span>()<br><br>                  DATE         TAG  POSTS<br><span
+                style="color:#d19a66;">0  2008</span>-<span style="color:#d19a66;">07</span>-<span
+                style="color:#d19a66;">01 00</span>:<span style="color:#e5c07b;">00</span>:<span style="color:#d19a66;">00          </span>c<span
+                style="color:#5c6370;font-style:italic;">#      3<br></span><span style="color:#d19a66;">1  2008</span>-<span
+                style="color:#d19a66;">08</span>-<span style="color:#d19a66;">01 00</span>:<span style="color:#e5c07b;">00</span>:<span
+                style="color:#d19a66;">00    </span>assembly      <span style="color:#d19a66;">8<br></span><span
+                style="color:#d19a66;">2  2008</span>-<span style="color:#d19a66;">08</span>-<span
+                style="color:#d19a66;">01 00</span>:<span style="color:#e5c07b;">00</span>:<span style="color:#d19a66;">00  </span>javascript    <span
+                style="color:#d19a66;">162<br></span><span style="color:#d19a66;">3  2008</span>-<span
+                style="color:#d19a66;">08</span>-<span style="color:#d19a66;">01 00</span>:<span style="color:#e5c07b;">00</span>:<span
+                style="color:#d19a66;">00           </span>c     <span style="color:#d19a66;">85<br></span><span
+                style="color:#d19a66;">4  2008</span>-<span style="color:#d19a66;">08</span>-<span
+                style="color:#d19a66;">01 00</span>:<span style="color:#e5c07b;">00</span>:<span style="color:#d19a66;">00      </span>python    <span
+                style="color:#d19a66;">124<br></span><span style="color:#d19a66;"><br></span><span
+                style="color:#d19a66;"><br></span>df.<span style="color:#61afef;">pivot</span>(<span
+                style="color:#d19a66;">index</span>=<span style="color:#89ca78;">'DATE'</span>, <span
+                style="color:#d19a66;">columns</span>=<span style="color:#89ca78;">'TAG'</span>, <span
+                style="color:#d19a66;">values</span>=<span style="color:#89ca78;">'POSTS'</span>)<br><br>TAG                  assembly       c       ruby   swift    ...<br>DATE<br><span
+                style="color:#d19a66;">2008</span>-<span style="color:#d19a66;">07</span>-<span style="color:#d19a66;">01 00</span>:<span
+                style="color:#e5c07b;">00</span>:<span style="color:#d19a66;">00       </span>NaN     NaN       NaN     NaN<br><span
+                style="color:#d19a66;">2008</span>-<span style="color:#d19a66;">08</span>-<span style="color:#d19a66;">01 00</span>:<span
+                style="color:#e5c07b;">00</span>:<span style="color:#d19a66;">00       8.0    85.0      73.0     </span>NaN<br><span
+                style="color:#d19a66;">2020</span>-<span style="color:#d19a66;">03</span>-<span style="color:#d19a66;">01 00</span>:<span
+                style="color:#e5c07b;">00</span>:<span
+                style="color:#d19a66;">00     317.0  2670.0     780.0   3434.0<br></span><span style="color:#d19a66;">2020</span>-<span
+                style="color:#d19a66;">04</span>-<span style="color:#d19a66;">01 00</span>:<span style="color:#e5c07b;">00</span>:<span
+                style="color:#d19a66;">00     406.0  3472.0    860.0   4015.0<br></span><span style="color:#d19a66;">2020</span>-<span
+                style="color:#d19a66;">05</span>-<span style="color:#d19a66;">01 00</span>:<span style="color:#e5c07b;">00</span>:<span
+                style="color:#d19a66;">00     386.0  3602.0     774.0  4066.0<br></span><span style="color:#d19a66;">2020</span>-<span
+                style="color:#d19a66;">06</span>-<span style="color:#d19a66;">01 00</span>:<span style="color:#e5c07b;">00</span>:<span
+                style="color:#d19a66;">00     363.0  2757.0     670.0  3733.0<br></span><span style="color:#d19a66;">2020</span>-<span
+                style="color:#d19a66;">07</span>-<span style="color:#d19a66;">01 00</span>:<span style="color:#e5c07b;">00</span>:<span
+                style="color:#d19a66;">00     298.0  2294.0     775.0  3607.0<br></span>...<br><br><br>df.<span
+                style="color:#61afef;">pivot</span>(<span style="color:#d19a66;">index</span>=<span
+                style="color:#89ca78;">'TAG'</span>, <span style="color:#d19a66;">columns</span>=<span
+                style="color:#89ca78;">'DATE'</span>, <span style="color:#d19a66;">values</span>=<span
+                style="color:#89ca78;">'POSTS'</span>)<br><br>DATE        <span style="color:#d19a66;">2008</span>-<span
+                style="color:#d19a66;">07</span>-<span style="color:#d19a66;">01 00</span>:<span style="color:#e5c07b;">00</span>:<span
+                style="color:#d19a66;">00  </span>...  <span style="color:#d19a66;">2020</span>-<span
+                style="color:#d19a66;">07</span>-<span style="color:#d19a66;">01 00</span>:<span style="color:#e5c07b;">00</span>:<span
+                style="color:#d19a66;">00<br></span>TAG                              ...                     <br>assembly                    NaN  ...                <span
+                style="color:#d19a66;">298.0<br></span>c                           NaN  ...               <span
+                style="color:#d19a66;">2294.0<br></span>c++                         NaN  ...               <span
+                style="color:#d19a66;">5756.0<br></span>delphi                      NaN  ...                <span
+                style="color:#d19a66;">212.0<br></span>go                          NaN  ...                <span
+                style="color:#d19a66;">743.0<br></span>java                        NaN  ...              <span
+                style="color:#d19a66;">12723.0<br></span>javascript                  NaN  ...              <span
+                style="color:#d19a66;">23802.0<br></span>...<br></pre>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;"><br></p>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;">"AGG" is used to perform different operations on one or
+            more columns of a DataFrame. This function can be applied to a DataFrames or&nbsp; Series or chained with
+            groupby objects. <a  target="_blank" 
+                    href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.agg.html">DF
+                doc</a>&nbsp; &nbsp; &nbsp; <a  target="_blank" 
+                    href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.agg.html">S doc</a>&nbsp;
+        </p>
+        <pre style="background-color:#282c34;color:#bbbbbb;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><span
+                style="color:#5c6370;font-style:italic;">#______ SERIES _____</span><span
+                style="color:#5c6370;font-style:italic;"><br></span>max_value = s.<span
+                style="color:#61afef;">agg</span>(<span style="color:#89ca78;">'max'</span>)                  <span
+                style="color:#5c6370;font-style:italic;"># doing one operation on series<br></span>s.<span
+                style="color:#61afef;">agg</span>([<span style="color:#89ca78;">'min'</span>, <span
+                style="color:#89ca78;">'max'</span>, <span style="color:#89ca78;">'mean'</span>, <span
+                style="color:#89ca78;">'median'</span>])   <span style="color:#5c6370;font-style:italic;"># doing a list of operations on series<br></span><span
+                style="color:#5c6370;font-style:italic;"># output: a new Series with the minimum, maximum, mean, and median of the original Series.</span></pre>
+        <pre style="background-color:#282c34;color:#bbbbbb;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><span
+                style="color:#5c6370;font-style:italic;">#______ DATAFRAME _____<br></span><span
+                style="color:#5c6370;font-style:italic;"># apply a single function to each column of the DataFrame<br></span>df.<span
+                style="color:#61afef;">agg</span>(<span style="color:#89ca78;">'mean'</span>)<br><span
+                style="color:#5c6370;font-style:italic;"># output: A new Series with the mean value of each column.<br></span><span
+                style="color:#5c6370;font-style:italic;"><br></span><span style="color:#5c6370;font-style:italic;"># apply a list of functions to each column of the DataFrame<br></span>df.<span
+                style="color:#61afef;">agg</span>([<span style="color:#89ca78;">'mean'</span>, <span
+                style="color:#89ca78;">'std'</span>])<br><span style="color:#5c6370;font-style:italic;"># output: A new DataFrame with a row for the mean and standard deviation of each column.<br></span><span
+                style="color:#5c6370;font-style:italic;"><br></span><span style="color:#5c6370;font-style:italic;"># apply different functions to different columns using a dictionary of lists<br></span>df.<span
+                style="color:#61afef;">agg</span>({<span style="color:#89ca78;">'column1'</span>: [<span
+                style="color:#89ca78;">'mean'</span>, <span style="color:#89ca78;">'std'</span>], <span
+                style="color:#89ca78;">'column2'</span>: [<span style="color:#89ca78;">'max'</span>, <span
+                style="color:#89ca78;">'min'</span>]})<br><span style="color:#5c6370;font-style:italic;"># output: A new DataFrame with a row for the mean and standard deviation of column1<br></span><span
+                style="color:#5c6370;font-style:italic;"># and a row for the max and min of column2.</span></pre></pre>
+        <pre style="background-color:#282c34;color:#bbbbbb;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><span
+                style="color:#5c6370;font-style:italic;">#______ GROUPBY OBJECT _____<br></span>df.<span
+                style="color:#61afef;">groupby</span>(<span style="color:#89ca78;">"year"</span>).<span
+                style="color:#61afef;">agg</span>({<span style="color:#89ca78;">"theme_id"</span>: <span
+                style="color:#89ca78;">"nunique"</span>})<br><span style="color:#5c6370;font-style:italic;"># output: A new Series or DF (based on number of aggregrated columns)<br></span><span
+                style="color:#5c6370;font-style:italic;"># with "unique" values for "theme_id" in each   "group"  .<br></span><span
+                style="color:#5c6370;font-style:italic;"><br></span></pre>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;"><br></p>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;">"TO_DATETIME" function can convertana str object of
+            time and date data to a "timestamps pandas object", so we can work with date and time easily:</p>
+        <pre style="background-color:#282c34;color:#bbbbbb;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><span
+                style="color:#5c6370;font-style:italic;"># it also converts "2020-07-01 00:00:00" to "2020-07-01" if the time is "00:00:00".<br></span>df.DATA = pandas.<span
+                style="color:#61afef;">to_datetime</span>(df.DATE)<br></pre>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;"><span style="font-size: 1.3rem;"><br></span></p>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;"><span style="font-size: 1.3rem;">"MERGE" function merges two data frames based on a common key or id:&nbsp; doc</span>
+        </p>
+        <pre style="background-color:#282c34;color:#bbbbbb;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><br>mg_df = pd.<span
+                style="color:#61afef;">merge</span>(set_df_theme_count, theme_df, <span style="color:#d19a66;">on</span>=<span
+                style="color:#89ca78;">'id'</span>)  <br><span style="color:#5c6370;font-style:italic;"># "id" is a common column  between both DFs, <br></span><span
+                style="color:#5c6370;font-style:italic;"># the values which are not common in "id", would be ignored in new DF.<br></span><span
+                style="color:#5c6370;font-style:italic;"><br></span></pre>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;"><span style="font-size: 1.3rem;"><br></span></p>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;"><span style="font-size: 1.3rem;">Some methods to take an output:</span>
+        </p>
+        <pre style="background-color: rgb(40, 44, 52); color: rgb(187, 187, 187); font-family: &quot;JetBrains Mono&quot;, monospace;">.<span
+                style="color: rgb(97, 175, 239);">to_list</span>()<br>.<span
+                style="color: rgb(97, 175, 239);">to_dict</span>()<br>.<span
+                style="color: rgb(97, 175, 239);">to_csv</span>(<span
+                style="color: rgb(137, 202, 120);">'example.csv'</span>)</pre>
+        <div><br></div>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;"><span
+                style="font-size: 1.3rem;">SOME ADDITIONALLS:</span></p>
+        <pre style="background-color:#282c34;color:#bbbbbb;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><span
+                style="color:#5c6370;font-style:italic;"># To make python, print the whole table:<br></span>pd.<span
+                style="color:#61afef;">option_context</span>(<span
+                style="color:#89ca78;">'display.max_rows'</span>, <span
+                style="color:#d55fde;font-style:italic;">None</span>)<br>pd.<span
+                style="color:#61afef;">option_context</span>(<span style="color:#89ca78;">'display.max_columns'</span>, <span
+                style="color:#d55fde;font-style:italic;">None</span>)<br><span style="color:#5c6370;font-style:italic;"># Or<br></span>pd.<span
+                style="color:#61afef;">to_string</span>()</pre>
+        <pre style="background-color:#282c34;color:#bbbbbb;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><span style="color:#89ca78;">""""<br></span><span
+                style="color:#89ca78;">A pandas groupby() object is not exactly the same as a DataFrame,<br></span><span
+                style="color:#89ca78;">but it does provide many of the same methods and functions as a DataFrame, <br></span><span
+                style="color:#89ca78;">as well as some additional ones that are specific to group-wise operations.<br></span><span
+                style="color:#89ca78;">However, there are some differences between a groupby() object and a DataFrame.<br></span><span
+                style="color:#89ca78;">For example, the groupby() object does not have a columns attribute,<br></span><span
+                style="color:#89ca78;">and you cannot apply certain methods to it, such as sort_values(). <br></span><span
+                style="color:#89ca78;">"""<br></span><span style="color:#5c6370;font-style:italic;"># make a DF out of the grupby obj. by keeping its properties.<br></span>new_df = grouped_data.<span
+                style="color:#61afef;">reset_index</span>()<br><br></pre></pre>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;"><span style="font-size: 1.3rem;"><br></span></p>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;"><span style="font-size: 1.3rem;">ROLLING AVERAGE</span>
+        </p>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;"><span style="font-size: 1.3rem;">It is the simple mean of the last ‘n’ values. It usually can be used to make smoother data charts.</span>
+        </p>
+        <pre style="background-color:#282c34;color:#bbbbbb;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><br>rolling_df = df.<span
+                style="color:#61afef;">rolling</span>(<span style="color:#d19a66;">window</span>=<span
+                style="color:#d19a66;">5</span>).<span style="color:#61afef;">mean</span>()     <span
+                style="color:#5c6370;font-style:italic;"># Here we converted the whole DF values to rolling ave.<br></span><span
+                style="color:#5c6370;font-style:italic;">                                             # "window" attr. determines is "n" last values.<br></span><span
+                style="color:#5c6370;font-style:italic;">                                             # if you want to make rolling ave. out of the preceded and beyond values,<br></span><span
+                style="color:#5c6370;font-style:italic;">                                             # use "center=True"</span><br></pre>
+    </section>
+    <section id="os">
+        <hr>
+        <h3>OS</h3>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;">The OS module in Python provides functions for
+            interacting with the operating system.&nbsp;<a  target="_blank"  href="https://pypi.org/project/pipreqs/">
+                Docs</a></p>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;">OS.ENVIRON:</p>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;">It is one of its functions that allows us to work with
+            environmental variables.</p>
+        <pre style="background-color:#282c34;color:#bbbbbb;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><br><span
+                style="color:#5c6370;font-style:italic;"># Making or Modifying a Var.:    (you can also use .env to make environ vars using dotenv package)<br></span>os.environ[<span
+                style="color:#89ca78;">'JAVA_HOME'</span>] = <span
+                style="color:#89ca78;">'/home / ihritik / jdk-10.0.1'</span></pre><span
+                style="color:#89ca78;"><br></span><span style="color:#5c6370;font-style:italic;"># Catching All in a Dictionary:<br></span>pprint.<span
+                style="color:#61afef;">pprint</span>(<span style="color:#2bbac5;">dict</span>(os.environ), <span
+                style="color:#d19a66;">width </span>= <span style="color:#d19a66;">1</span>)<br><br><span
+                style="color:#5c6370;font-style:italic;"># Accessing One:<br></span>java_home = os.environ.<span
+                style="color:#61afef;">get</span>(<span style="color:#89ca78;">'JAVA_HOME'</span>)<br><br><span
+                style="color:#5c6370;font-style:italic;"># Throwing Something else if it Couldn't Find the Var. (like a string):<br></span>os.environ.<span
+                style="color:#61afef;">get</span>(<span style="color:#89ca78;">'MY_HOME'</span>, <span
+                style="color:#89ca78;">"Environment variable does not exist"</span>)<br>os.environ.<span
+                style="color:#61afef;">get</span>(<span style="color:#89ca78;">"DATABASE_URL"</span>,  <span
+                style="color:#89ca78;">"sqlite:///blog.db"</span>)</pre>
+        <span style="font-size: 20.8px;">SOME OTHER METHODS:</span>
+        <pre style="background-color:#282c34;color:#bbbbbb;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><span
+                style="color:#5c6370;font-style:italic;"># Method to change the current working directory to the specified path.<br></span>os.<span
+                style="color:#61afef;">chdir</span>(<span style="color:#89ca78;">'E:/Tutorials/Code/6.Advanced/72 Day 72path'</span>)<br><br><span
+                style="color:#5c6370;font-style:italic;"># Check the working directory<br></span>os. <span
+                style="color:#61afef;">getcwd</span>()<br><br><span style="color:#5c6370;font-style:italic;"># Make a new dir<br></span>os.<span
+                style="color:#61afef;">mkdir</span>(<span style="color:#d19a66;">path</span>=<span
+                style="color:#89ca78;">"new folder"</span>)<br><br></pre></pre>
+        <hr>
+    </section>
+    <section id="Pipreqs">
+        <h3>Pipreqs</h3>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;">Pipreqs scans all .py files in your project folder and
+            makes a requierments.txt based on 'import' statements.&nbsp;<a  target="_blank"  href="https://pypi.org/project/pipreqs/">
+                Docs</a></p>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;">Use this commands in cmd based terminal:</p>
+        <pre style="background-color: rgb(40, 44, 52);"><pre
+                style="color: rgb(171, 178, 191); font-family: &quot;JetBrains Mono&quot;, monospace;">pip install pipreqs                #No need to install it on project folder.<br></pre><pre
+                style=""><font color="#abb2bf" face="JetBrains Mono, monospace">(py vir2) C:\DEVELOPMENT\py vir2&gt;pipreqs "E:\Tutorials\Code\Advance\PRJ" </font><span
+                style="color: rgb(171, 178, 191); font-family: &quot;JetBrains Mono&quot;, monospace;">
+</span></pre><div style="color: rgb(171, 178, 191); font-family: &quot;JetBrains Mono&quot;, monospace;"><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><span style="color:#5c6370;">#ATENTIONS: "" around location.</span></pre><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><span
+                style="color:#5c6370;"><br></span></pre></div></pre>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;"><span style="font-size: 1.3rem;">Notice that if *.py files have an error, pipreqs won't create the requirements file.</span>
+        </p>
+
+        <section id="Flask">
+            <hr>
+            <h3>Flask</h3>
+            <p style="box-sizing: border-box; margin: 0px 0px 10px;">Flask is used for developing web applications using
+                python, implemented on Werkzeug and Jinja2.<a  target="_blank"  href="https://flask.palletsprojects.com/en/2.2.x/">
+                    Docs </a> <a  target="_blank" 
+                        href="https://drive.google.com/file/d/1_IUHVFv0ubZxEfrAPE4640bzvAD2e0HQ/view?usp=sharing">Here
+                    is a starter cheatsheet</a></p>
+
+
+        </section>
+
+    </section>
+    <section id="Flask_Gravatar">
+        <hr>
+        <h3>Flask_Gravatar</h3>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;">This makes it possible to have a random profile picture
+            for each user individually.&nbsp;<a  target="_blank"  href="https://flask-gravatar.readthedocs.io/en/latest/"> Docs</a>
+        </p>
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><br><span
+                style="color:#c678dd;">from </span>flask_gravatar <span
+                style="color:#c678dd;">import </span>Gravatar<br><br>gravatar = <span
+                style="color:#61afef;">Gravatar</span>(app,<br>                    <span
+                style="color:#d19a66;">size</span>=<span style="color:#d19a66;">100</span>,<br>                    <span
+                style="color:#d19a66;">rating</span>=<span
+                style="color:#98c379;">'g'</span>,<br>                    <span
+                style="color:#d19a66;">default</span>=<span style="color:#98c379;">'retro'</span>,<br>                    <span
+                style="color:#d19a66;">force_default</span>=<span style="color:#c678dd;">False</span>,<br>                    <span
+                style="color:#d19a66;">force_lower</span>=<span style="color:#c678dd;">False</span>,<br>                    <span
+                style="color:#d19a66;">use_ssl</span>=<span style="color:#c678dd;">False</span>,<br>                    <span
+                style="color:#d19a66;">base_url</span>=<span style="color:#c678dd;">None</span>)</pre>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;"><span style="font-size: 1.3rem;">It is like a jinja filter in HTML code and every time you give it identifying data of a user (for example: email, hashed password...), it will serve you the same image:</span>
+        </p>
+        <pre style="background-color: rgb(40, 44, 52); font-family: &quot;JetBrains Mono&quot;, monospace;"><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><pre
+                style="color: rgb(171, 178, 191); font-family: &quot;JetBrains Mono&quot;, monospace;">  </pre><pre
+                style="color: rgb(171, 178, 191); font-family: &quot;JetBrains Mono&quot;, monospace;">&lt;<span
+                style="color: rgb(224, 108, 117);">img </span><span style="color: rgb(209, 154, 102);">src</span><span
+                style="color: rgb(152, 195, 121);">="</span>{{ <span
+                style="color: rgb(209, 154, 102);">comment</span>.<span
+                style="color: rgb(209, 154, 102);">userstable</span>.<span
+                style="color: rgb(209, 154, 102);">name </span>| <span
+                style="color: rgb(209, 154, 102);">gravatar</span>(<span style="color: rgb(209, 154, 102);">size</span>=<span
+                style="color: rgb(209, 154, 102);">200</span>, <span
+                style="color: rgb(209, 154, 102);">rating</span>=<span style="color: rgb(152, 195, 121);">'x'</span>) }}<span
+                style="color: rgb(152, 195, 121);">" </span><span style="color: rgb(209, 154, 102);">class</span><span
+                style="color: rgb(152, 195, 121);">="commenterImage"</span>&gt;<br></pre><pre
+                style="color: rgb(171, 178, 191); font-family: &quot;JetBrains Mono&quot;, monospace;"><br></pre></pre></pre>
+    </section>
+
+
+    <section id="Flask_CKEditor">
+        <hr>
+        <h3>Flask_CKEditor</h3>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;">CKEditor integration for Flask, add text editor, add
+            support to image upload, code syntax highlighting and more.&nbsp;<a  target="_blank" 
+                    href="https://flask-ckeditor.readthedocs.io/en/latest/basic.html"> Docs</a>
+        </p>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;">You write in text-editor field with various styles and
+            colors, then in the output, it gives you the HTML code of your styled text.</p>
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><br><span
+                style="color:#c678dd;">from </span>flask_ckeditor <span
+                style="color:#c678dd;">import </span>CKEditor<br><span style="color:#c678dd;">from </span>flask_ckeditor <span
+                style="color:#c678dd;">import </span>CKEditorField<br><br>ckeditor = <span style="color:#61afef;">CKEditor</span>(flask_app)<br><br><br><span
+                style="color:#c678dd;">class </span><span style="color:#e5c07b;">CreatePostForm</span>(FlaskForm):<br>    title = <span
+                style="color:#61afef;">StringField</span>(<span style="color:#98c379;">"Blog Post Title"</span>, <span
+                style="color:#d19a66;">validators</span>=[<span style="color:#61afef;">DataRequired</span>()])<br>    body = <span
+                style="color:#61afef;">CKEditorField</span>(<span style="color:#98c379;">"Blog Content"</span>, <span
+                style="color:#d19a66;">validators</span>=[<span style="color:#61afef;">DataRequired</span>()])  ###<br>    submit = <span
+                style="color:#61afef;">SubmitField</span>(<span
+                style="color:#98c379;">"Submit Post"</span>)<br><br></pre>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;"><span style="font-size: 1.3rem;">HTML codes should be similar to these:</span>
+        </p>
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;">  <br>   &lt;<span style="color:#e06c75;">div</span>&gt;<br>    {{ <span
+                style="color:#d19a66;">ckeditor</span>.<span style="color:#d19a66;">load</span>() }}<br>    {{ <span
+                style="color:#d19a66;">ckeditor</span>.<span style="color:#d19a66;">config</span>(<span
+                style="color:#d19a66;">name</span>=<span style="color:#98c379;">'body'</span>) }}<br>    {{ <span
+                style="color:#d19a66;">wtf</span>.<span style="color:#d19a66;">quick_form</span>(<span
+                style="color:#d19a66;">form</span>) }}<br>  &lt;/<span
+                style="color:#e06c75;">div</span>&gt;<br></pre><span style="color:#c678dd;">                </span><span
+                style="color:#c678dd;">             </span></pre></pre>
+
+    </section>
+
+    <section id="Werkzeug"><span style="font-size: 20.8px;">Then we can save this data to the database the same we behave with the other fields in the form.</span>
+
+        <span style="font-size: 20.8px;">To be able to show our text again in the way we styled it, we should use a jinja filter called 'safe':</span>
+
+
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"> &lt;<span
+                style="color:#e06c75;">div</span>&gt;<br>     {{ <span style="color:#d19a66;">post</span>.<span
+                style="color:#d19a66;">body</span>|<span style="color:#d19a66;">safe </span>}}  # if we do not use safe, all html elements would be shown.<br>&lt;/<span
+                style="color:#e06c75;">div</span>&gt;</pre>
+
+
+        <hr>
+        <h3>Werkzeug</h3>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;">Werkzeug is a comprehensive WSGI web application
+            library. It began as a simple collection of various utilities for WSGI applications.&nbsp;<a  target="_blank" 
+                    href="https://werkzeug.palletsprojects.com/en/2.2.x/utils/">utils docs</a>
+        </p>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;">HASHING PASSWORDS:</p>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;">Two main functions of this job are '<span
+                style="background-color: rgb(255, 255, 255); color: rgb(62, 67, 73); font-family: Consolas, Menlo, &quot;DejaVu Sans Mono&quot;, &quot;Bitstream Vera Sans Mono&quot;, monospace; font-size: 18.7px; font-weight: 700; white-space: nowrap;">generate_password_hash</span><span
+                style="font-size: 1.3rem;">' and '</span><span
+                style="background-color: rgb(255, 255, 255); color: rgb(62, 67, 73); font-family: Consolas, Menlo, &quot;DejaVu Sans Mono&quot;, &quot;Bitstream Vera Sans Mono&quot;, monospace; font-size: 18.7px; font-weight: 700; white-space: nowrap;">check_password_hash</span><span
+                style="font-size: 1.3rem;">':</span></p>
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><br><span
+                style="color:#c678dd;">import </span>werkzeug.security<br><br>a = werkzeug.security.<span
+                style="color:#61afef;">generate_password_hash</span>(<span style="color:#d19a66;">password</span>=<span
+                style="color:#98c379;">'12345'</span>, <span style="color:#d19a66;">method</span>=<span
+                style="color:#98c379;">'pbkdf2:sha256'</span>, <span style="color:#d19a66;">salt_length</span>=<span
+                style="color:#d19a66;">16</span>)<br>b = werkzeug.security.<span style="color:#61afef;">check_password_hash</span>(<span
+                style="color:#d19a66;">pwhash</span>=a, <span style="color:#d19a66;">password</span>=<span
+                style="color:#98c379;">'12345'</span>)<br>c = werkzeug.security.<span style="color:#61afef;">check_password_hash</span>(<span
+                style="color:#d19a66;">pwhash</span>=a, <span style="color:#d19a66;">password</span>=<span
+                style="color:#98c379;">'123'</span>)<br><br><span style="color:#56b6c2;">print</span>(b)<br><span
+                style="color:#56b6c2;">print</span>(c)<br><br>result &gt;&gt;&gt;&gt; <br>                <span
+                style="color:#c678dd;">True<br></span><span style="color:#c678dd;">                False<br></span><span
+                style="color:#c678dd;">                </span><span
+                style="color:#c678dd;">             </span></pre></pre>
+
+    </section>
+
+
+    <section id="Flask-Login">
+        <hr>
+        <h3>Flask-Login</h3>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;">With the help of this module, we can add the
+            possibility to log in and log out to our website.&nbsp;<a  target="_blank" 
+                    href="https://flask-login.readthedocs.io/en/latest/">https://flask-login.readthedocs.io/en/latest/</a>
+        </p>
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><br><span
+                style="color:#c678dd;">from </span>flask_login <span style="color:#c678dd;">import </span>UserMixin, login_user, LoginManager, login_required, current_user, logout_user<br><br></pre>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;">It connects to the database to authenticate the users
+            and it also needs a load_user function:</p>
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><br>app = <span
+                style="color:#61afef;">Flask</span>(__name__)<br>login_manager = <span style="color:#61afef;">LoginManager</span>(<span
+                style="color:#d19a66;">app</span>=app)                               <br>login_manager.login_view = <span
+                style="color:#98c379;">'login'<br></span><span style="color:#5c6370;">#above LINE DIRECTS UNAUTHORUZED USERS TO 'LOGIN' PAGE IF THEY WANTED TO ACCSES SECRET PAGES.<br></span><span
+                style="color:#5c6370;"><br></span><span style="color:#5c6370;"># MAKING THIS FUNCTION IS NECESSARY.<br></span><span
+                style="color:#e5c07b;">@login_manager.user_loader<br></span><span
+                style="color:#c678dd;">def </span><span style="color:#61afef;">user_load</span>(<span
+                style="color:#d19a66;">user_id</span>):<br>    <span
+                style="color:#c678dd;">return </span>User.query.<span style="color:#61afef;">get</span>(<span
+                style="color:#56b6c2;">int</span>(<span style="color:#d19a66;">user_id</span>))<br><br><span
+                style="color:#5c6370;"># USERMIXIN CONNECTS THE FLASK_LOGIN TO DATABASE.<br></span><span
+                style="color:#c678dd;">class </span><span style="color:#e5c07b;">User</span>(UserMixin, db.Model):<br>    id = db.<span
+                style="color:#61afef;">Column</span>(db.Integer, <span style="color:#d19a66;">primary_key</span>=<span
+                style="color:#c678dd;">True</span>)<br>    email = db.<span
+                style="color:#61afef;">Column</span>(db.<span style="color:#61afef;">String</span>(<span
+                style="color:#d19a66;">100</span>), <span style="color:#d19a66;">unique</span>=<span
+                style="color:#c678dd;">True</span>)<br>    password = db.<span
+                style="color:#61afef;">Column</span>(db.<span style="color:#61afef;">String</span>(<span
+                style="color:#d19a66;">100</span>))<br>    name = db.<span style="color:#61afef;">Column</span>(db.<span
+                style="color:#61afef;">String</span>(<span style="color:#d19a66;">1000</span>))<br><br></pre></pre>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;">If the credential of a user matched the database, then
+            you should use a 'login_user' function and pass the user to it.</p>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;">first, user enters his login credential into a form,
+            second, we find the user in the database and check the integrity of the password, then we pass that user to
+            'login_user' function.</p>
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><br><span
+                style="color:#e5c07b;">@app.route</span>(<span style="color:#98c379;">'/login'</span>, <span
+                style="color:#d19a66;">methods</span>=[<span style="color:#98c379;">'GET'</span>, <span
+                style="color:#98c379;">'POST'</span>])<br><span style="color:#c678dd;">def </span><span
+                style="color:#61afef;">login</span>():<br>    <span
+                style="color:#c678dd;">if </span>request.method == <span style="color:#98c379;">'POST'</span>:<br>        user = User.query.<span
+                style="color:#61afef;">filter_by</span>(<span style="color:#d19a66;">email</span>=request.form[<span
+                style="color:#98c379;">'email'</span>]).<span style="color:#61afef;">first</span>()<br>        <span
+                style="color:#c678dd;">if </span>user:<br>            <span style="color:#c678dd;">if </span><span
+                style="color:#61afef;">check_password_hash</span>(<span style="color:#d19a66;">password</span>=request.form[<span
+                style="color:#98c379;">'password'</span>], <span
+                style="color:#d19a66;">pwhash</span>=user.password):<br>                <span style="color:#61afef;">login_user</span>(user) ####<br>                <span
+                style="color:#61afef;">flash</span>(<span style="color:#98c379;">'Login Successfully'</span>)<br>                <span
+                style="color:#c678dd;">return </span><span style="color:#61afef;">redirect</span>(<span
+                style="color:#61afef;">url_for</span>(<span style="color:#98c379;">'secrets'</span>))</pre>
+        <h4 style="box-sizing: border-box; font-family: inherit; font-weight: 500; line-height: 1.1; color: inherit; margin-top: 10px; margin-bottom: 10px;">
+            <span style="font-size: 20.8px;">It is also important to distinguish the pages which require logging in:</span>
+        </h4>
+        <div>
+            <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><br><span
+                    style="color:#e5c07b;">@app.route</span>(<span style="color:#98c379;">'/secrets'</span>)<br><span
+                    style="color:#e5c07b;">@login_required  ####<br></span><span style="color:#c678dd;">def </span><span
+                    style="color:#61afef;">secrets</span>():<br>    <span style="color:#c678dd;">return </span><span
+                    style="color:#61afef;">render_template</span>(<span
+                    style="color:#98c379;">"secrets.html"</span>, <span style="color:#d19a66;">logged_in</span>=current_user.is_authenticated, <span
+                    style="color:#d19a66;">name</span>=current_user.name)<br><br></pre>
+        </div>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;">As you see above, 'current_user' is an object from the
+            flask login which can provide you with some info about the users.</p>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;">Finally by the help of&nbsp; 'logout_user' , you can
+            let the users to log out:</p>
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><br><span
+                style="color:#e5c07b;">@app.route</span>(<span style="color:#98c379;">'/logout'</span>)<br><span
+                style="color:#c678dd;">def </span><span style="color:#61afef;">logout</span>():<br>    <span
+                style="color:#61afef;">logout_user</span>()<br>    <span style="color:#c678dd;">return </span><span
+                style="color:#61afef;">redirect</span>(<span style="color:#61afef;">url_for</span>(<span
+                style="color:#98c379;">'home'</span>))<br><br></pre>
+        <p>ADDITIONALS</p>
+        <p>You can make your own decorator as same as 'login_required'. <a  target="_blank" 
+                href="https://flask.palletsprojects.com/en/1.1.x/patterns/viewdecorators/#login-required-decorator">docs</a>
+        </p>
+        <p>It is used to give some extra permissions to admins:</p>
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><br><span
+                style="color:#c678dd;">from </span>functools <span
+                style="color:#c678dd;">import </span>wraps<br><br><br><span style="color:#c678dd;">def </span><span
+                style="color:#61afef;">admin_only</span>(<span style="color:#d19a66;">func</span>):<br>    <span
+                style="color:#e5c07b;">@wraps</span>(<span style="color:#d19a66;">func</span>)<br>    <span
+                style="color:#c678dd;">def </span><span style="color:#61afef;">decorated_function</span>(<span
+                style="color:#d19a66;">*args</span>, <span style="color:#d19a66;">**kwargs</span>):<br>        <span
+                style="color:#c678dd;">if </span>current_user <span style="color:#c678dd;">is None</span>:<br>            <span
+                style="color:#c678dd;">return </span><span style="color:#61afef;">redirect</span>(<span
+                style="color:#61afef;">url_for</span>(<span style="color:#98c379;">'login'</span>))<br>        <span
+                style="color:#c678dd;">elif </span>current_user.admin != <span style="color:#d19a66;">1</span>: <span
+                style="color:#5c6370;">#IN DATABASE, WE HAVE MADEN A BOOLEAN COLUMN TO DISTINGUISH ADMINS.<br></span><span
+                style="color:#5c6370;">            </span><span style="color:#61afef;">abort</span>(<span
+                style="color:#d19a66;">403</span>)<br>        <span style="color:#c678dd;">return </span><span
+                style="color:#d19a66;">func</span>(*<span style="color:#d19a66;">args</span>, **<span
+                style="color:#d19a66;">kwargs</span>)<br>    <span style="color:#c678dd;">return </span>decorated_function<br><br><br><span
+                style="color:#e5c07b;">@app.route</span>(<span style="color:#98c379;">"/example"</span>)<br><span
+                style="color:#e5c07b;">@admin_only<br></span><span style="color:#c678dd;">def </span><span
+                style="color:#61afef;">example</span>():<br>    <span style="color:#c678dd;">pass<br></span><span
+                style="color:#c678dd;"><br></span></pre>
+    </section>
+
+
+    <section id="Jinja">
+        <hr>
+        <h3>Jinja</h3>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;">TEMPLATING:</p>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;">We can inject a header.html and footer.html using Jinja
+            and the code might look something like this:</p>
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><br><span
+                style="color:#e5c07b;">{% </span><span style="color:#c678dd;">include </span><span
+                style="color:#98c379;">"header.html" </span><span
+                style="color:#e5c07b;">%}<br></span>Web page content<br><span style="color:#e5c07b;">{% </span><span
+                style="color:#c678dd;">include </span><span style="color:#98c379;">"footer.html" </span><span
+                style="color:#e5c07b;">%}<br></span><span style="color:#e5c07b;"><br></span></pre>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;">This is a really flexible way of using Jinja to
+            Template a website. It means that if your header and footer stay the same then you can just insert them into
+            all your webpages.</p>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;"><br></p>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;">TEMPLATE INHERITANCE:</p><h4
+            style="box-sizing: border-box; font-family: inherit; font-weight: 500; line-height: 1.1; color: inherit; margin-top: 10px; margin-bottom: 10px; font-size: 18px;">
+        <span style="font-size: 1.3rem;">However, often you'll find that you actually want to use the same design template for your entire website, but you might need to change some code in your header or footer. In these cases, it's better to use</span><span
+            style="font-size: 1.3rem;">&nbsp;</span><span
+            style="font-size: 1.3rem; box-sizing: border-box; font-weight: 700;">Template Inheritance</span><span
+            style="font-size: 1.3rem;">&nbsp;</span><span style="font-size: 1.3rem;">instead.</span><br></h4>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;">Template inheritance is similar to Class inheritance,
+            you can take a parent template and extend its styling in your child web pages.</p>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;"><span style="font-size: 1.3rem;">For example, if we create a base.html file that has the
+            following code:</span><br></p>
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;">&lt;!DOCTYPE <span
+                style="color:#d19a66;">html</span>&gt;<br>&lt;<span style="color:#e06c75;">html </span><span
+                style="color:#d19a66;">lang</span><span style="color:#98c379;">="en"</span>&gt;<br>&lt;<span
+                style="color:#e06c75;">head</span>&gt;<br>    &lt;<span style="color:#e06c75;">meta </span><span
+                style="color:#d19a66;">charset</span><span style="color:#98c379;">="UTF-8"</span>&gt;<br>    &lt;<span
+                style="color:#e06c75;">title</span>&gt;<span style="color:#e5c07b;">{% </span><span
+                style="color:#c678dd;">block </span><span style="color:#d19a66;">title </span><span
+                style="color:#e5c07b;">%}{% </span><span style="color:#c678dd;">endblock </span><span
+                style="color:#e5c07b;">%}</span>&lt;/<span style="color:#e06c75;">title</span>&gt;<br>&lt;/<span
+                style="color:#e06c75;">head</span>&gt;<br>&lt;<span style="color:#e06c75;">body</span>&gt;<br>    <span
+                style="color:#e5c07b;">{% </span><span style="color:#c678dd;">block </span><span style="color:#d19a66;">content </span><span
+                style="color:#e5c07b;">%}{% </span><span style="color:#c678dd;">endblock </span><span
+                style="color:#e5c07b;">%}<br></span>&lt;/<span style="color:#e06c75;">body</span>&gt;<br>&lt;/<span
+                style="color:#e06c75;">html</span>&gt;<br><br></pre>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;">It has predefined areas (or blocks) where new content
+            can be inserted by a child webpage inheriting from this template.</p>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;">We could re-write the success.html page to inherit from
+            this base.html template:</p>
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><br>#1. This line of code tells the templating engine (Jinja) to use "base.html" as the template for this page.<br><span
+                style="color:#e5c07b;">{% </span><span style="color:#c678dd;">extends </span><span
+                style="color:#98c379;">"base.html" </span><span style="color:#e5c07b;">%}<br></span><span
+                style="color:#e5c07b;"><br></span>#2.This block inserts a custom title into the header of the template.<br><span
+                style="color:#e5c07b;">{% </span><span style="color:#c678dd;">block </span><span style="color:#d19a66;">title </span><span
+                style="color:#e5c07b;">%}</span>Success<span style="color:#e5c07b;">{% </span><span
+                style="color:#c678dd;">endblock </span><span style="color:#e5c07b;">%}<br></span><span
+                style="color:#e5c07b;"><br></span>#3.This block provides the content of the website. The part that is going to vary between webpages.<br><span
+                style="color:#e5c07b;">{% </span><span style="color:#c678dd;">block </span><span style="color:#d19a66;">content </span><span
+                style="color:#e5c07b;">%}<br></span><span style="color:#e5c07b;">   </span>&lt;<span
+                style="color:#e06c75;">div </span><span style="color:#d19a66;">class</span><span style="color:#98c379;">="container"</span>&gt;<br>      &lt;<span
+                style="color:#e06c75;">h1</span>&gt;Top Secret &lt;/<span style="color:#e06c75;">h1</span>&gt;<br>      &lt;<span
+                style="color:#e06c75;">iframe </span><span style="color:#d19a66;">src</span><span
+                style="color:#98c379;">="https://giphy.com/embed/Ju7l5y9osyymQ" </span><span style="color:#d19a66;">width</span><span
+                style="color:#98c379;">="480" </span><span style="color:#d19a66;">height</span><span
+                style="color:#98c379;">="360" </span><span style="color:#d19a66;">class</span><span
+                style="color:#98c379;">="giphy-embed" </span><span style="color:#d19a66;">allowFullScreen</span>&gt;&lt;/<span
+                style="color:#e06c75;">iframe</span>&gt;<br>      &lt;<span style="color:#e06c75;">p</span>&gt;&lt;<span
+                style="color:#e06c75;">a </span><span style="color:#d19a66;">href</span><span style="color:#98c379;">="https://giphy.com/gifs/rick-astley-Ju7l5y9osyymQ"</span>&gt;via GIPHY&lt;/<span
+                style="color:#e06c75;">a</span>&gt;&lt;/<span style="color:#e06c75;">p</span>&gt;<br>   &lt;/<span
+                style="color:#e06c75;">div</span>&gt;<br><span style="color:#e5c07b;">{% </span><span
+                style="color:#c678dd;">endblock </span><span style="color:#e5c07b;">%}<br></span><span
+                style="color:#e5c07b;"><br></span></pre>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;"><span style="font-size: 1.3rem;"><br></span></p>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;"><span style="font-size: 1.3rem;">When we are inheriting templates, Sometimes, there's some part of the template that we want to keep, but we also want to add to it. So we can use super blocks in this case.</span><br>
+        </p>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;">We add the following code to base.html:</p>
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><br>&lt;<span
+                style="color:#e06c75;">style</span>&gt;<br><span style="color:#e5c07b;">{% </span><span
+                style="color:#c678dd;">block </span><span style="color:#d19a66;">styling </span><span
+                style="color:#e5c07b;">%}<br></span><span style="color:#e06c75;">body</span>{<br>    background: <span
+                style="color:#fefefe;background-color:#800080;">purple</span>;<br>}<br><span
+                style="color:#e5c07b;">{% </span><span style="color:#c678dd;">endblock </span><span
+                style="color:#e5c07b;">%}<br></span>&lt;/<span style="color:#e06c75;">style</span>&gt;<br><br></pre>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;">I named this block <span
+                style="background-color: rgb(249, 242, 244); color: rgb(199, 37, 78); font-family: Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; font-size: 12.6px;">styling</span>&nbsp;but
+            you can call it anything you want.&nbsp;<span style="font-size: 1.3rem;">Just make sure that you close all blocks with</span><span
+                    style="font-size: 1.3rem;">&nbsp;</span><span
+                    style="background-color: rgb(249, 242, 244); color: rgb(199, 37, 78); font-family: Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; font-size: 12.6px;">{% endblock %}</span>
+        </p>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;">Now if you reload your website, you should see that
+            child pages have a purple background.</p>
+        <figure style="box-sizing: border-box; margin: 0px;"><span style="font-size: 1.3rem;">So now you can see how easy it is to modify all web
+            pages in your website if you use the same template.&nbsp;</span><br></figure>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;">If we want to give some of the pages, their own styling
+            in addition to the global style, we can use the 'super' function:</p>
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><br><span
+                style="color:#e5c07b;">{% </span><span style="color:#c678dd;">block </span><span style="color:#d19a66;">styling </span><span
+                style="color:#e5c07b;">%}<br></span><span style="color:#e5c07b;">   </span>{{ <span
+                style="color:#d19a66;">super</span>() }}<br>   h1 {<br>      color:red;<br>   }<br><span
+                style="color:#e5c07b;">{% </span><span style="color:#c678dd;">endblock </span><span
+                style="color:#e5c07b;">%}<br></span><span style="color:#e5c07b;"><br></span></pre>
+        <figure style="box-sizing: border-box; margin: 0px;"><br></figure>
+        <p style="box-sizing: border-box; margin: 0px 0px 10px;"><br
+                style="box-sizing: border-box; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);">
+        </p>
+
+    </section>
+
+    <section id="JSON">
+        <hr>
+        <h3>JSON</h3>
+        <p>JSON is a JSON file encoder and decoder module.&nbsp;<a  target="_blank"  href="https://docs.python.org/3/library/json.html">Docs</a>
+        </p>
+
+        <p>&nbsp;Here is how to make a JSON file with this library (you should always dump a dictionary) :</p>
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><br><span
+                style="color:#c678dd;">import </span>json<br><br>json_dict = {<span
+                style="color:#98c379;">'website'</span>:<br>                 {<span
+                style="color:#98c379;">'password'</span>: <span style="color:#98c379;">'acdfgfsd'</span>,<br>                  <span
+                style="color:#98c379;">"username"</span>: <span
+                style="color:#98c379;">'alo'</span>}<br>             }<br><br><br><span
+                style="color:#c678dd;">with </span><span style="color:#56b6c2;">open</span>(<span
+                style="color:#98c379;">'data.json'</span>, <span style="color:#98c379;">'w'</span>) <span
+                style="color:#c678dd;">as </span>data_file:<br>    json.<span style="color:#61afef;">dump</span>(json_dict, data_file, <span
+                style="color:#d19a66;">indent</span>=<span
+                style="color:#d19a66;">4</span>)<br><br><br></pre></pre></pre>
+        <p>To read JSON data from a JSON file we could use 'json.load' method and if you want to read a dictionary
+            structured file (such as an str.) as a dictionary in python you should use 'json.loads' method.</p>
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><br>a = <span
+                style="color:#56b6c2;">open</span>(<span style="color:#98c379;">'test.txt'</span>).<span
+                style="color:#61afef;">read</span>()<br>json1_data = json.<span
+                style="color:#61afef;">loads</span>(a)<br><span style="color:#56b6c2;">print</span>(<span
+                style="color:#56b6c2;">type</span>(a), <span style="color:#56b6c2;">type</span>(json1_data))<br><br>result &gt;&gt;&gt;&gt; &lt;<span
+                style="color:#c678dd;">class </span><span style="color:#98c379;">'str'</span>&gt; &lt;<span
+                style="color:#c678dd;">class </span><span style="color:#98c379;">'dict'</span>&gt;<br><br></pre>
+        <p>And this is how to update data with this module:</p>
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><br><span style="color:#5c6370;"># First data is being read, then it will be updated, then we dumped the whole json again.<br></span><span
+                style="color:#c678dd;">with </span><span style="color:#56b6c2;">open</span>(<span
+                style="color:#98c379;">'data.json'</span>, <span style="color:#98c379;">'r'</span>) <span
+                style="color:#c678dd;">as </span>data_file:<br>    data = json.<span style="color:#61afef;">load</span>(data_file)<br>    data.<span
+                style="color:#61afef;">update</span>(json_dict)    <span style="color:#5c6370;"># Update method is python Built-in.<br></span><span
+                style="color:#5c6370;">    <br></span><span style="color:#5c6370;"># Make sure to open in 'mode="w"' for having 1 dictionary in json file.<br></span><span
+                style="color:#c678dd;">with </span><span style="color:#56b6c2;">open</span>(<span
+                style="color:#98c379;">'data.json'</span>, <span style="color:#98c379;">'w'</span>) <span
+                style="color:#c678dd;">as </span>data_file: <br><br>    json.<span style="color:#61afef;">dump</span>(data, data_file, <span
+                style="color:#d19a66;">indent</span>=<span style="color:#d19a66;">4</span>)<br><br></pre></pre>
+
+    </section>
+
+    <section id="Flask-WTF">
+        <hr>
+        <h3>Flask-WTF</h3>
+        <p>Flask-WTF is an extension to use WTForm integrated with Flask. WTForms is a flexible forms validation and
+            rendering library for python.</p>
+        <p><a  target="_blank"  href="https://wtforms.readthedocs.io/en/2.3.x/">https://wtforms.readthedocs.io/en/2.3.x/</a>&nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+            <a  target="_blank"  href="https://flask-wtf.readthedocs.io/en/1.0.x/">https://flask-wtf.readthedocs.io/en/1.0.x/</a></p>
+        <p>&nbsp;How to start:</p>
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><br><span
+                style="color:#c678dd;">from </span>flask <span style="color:#c678dd;">import </span>Flask<br><span
+                style="color:#c678dd;">from </span>flask_wtf <span
+                style="color:#c678dd;">import </span>FlaskForm<br><span style="color:#5c6370;"># You can add different kinds of inputs for you form,<br></span><span
+                style="color:#5c6370;"># and also different kinds of validators to check if the input data is invalid.<br></span><span
+                style="color:#c678dd;">from </span>wtforms <span style="color:#c678dd;">import </span>StringField, SubmitField, URLField, SelectField<br><span
+                style="color:#c678dd;">from </span>wtforms.validators <span style="color:#c678dd;">import </span>DataRequired, url<br><br><br>app = <span
+                style="color:#61afef;">Flask</span>(__name__)<br><span style="color:#5c6370;"># You need to set a secret key.<br></span>app.config[<span
+                style="color:#98c379;">'SECRET_KEY'</span>] = <span style="color:#98c379;">'8BYkEfBA6O6donzWlSihBXox7C0sKR6b'<br></span><span
+                style="color:#98c379;"><br></span><span style="color:#c678dd;">class </span><span
+                style="color:#e5c07b;">CafeForm</span>(FlaskForm):<br>    <span style="color:#5c6370;"># You need to put validators in a list. </span>To use EMAIL validator, we should install 'email_validator'.<span
+                style="color:#5c6370;"><br></span><span style="color:#5c6370;">    </span>cafe = <span
+                style="color:#61afef;">StringField</span>(<span style="color:#98c379;">'Cafe name'</span>, <span
+                style="color:#d19a66;">validators</span>=[<span style="color:#61afef;">DataRequired</span>()]) <br>    loc = <span
+                style="color:#61afef;">URLField</span>(<span style="color:#98c379;">'Location'</span>, <span
+                style="color:#d19a66;">validators</span>=[<span style="color:#61afef;">DataRequired</span>(), <span
+                style="color:#61afef;">url</span>()])<br>    open = <span
+                style="color:#61afef;">StringField</span>(<span style="color:#98c379;">'Open'</span>, <span
+                style="color:#d19a66;">validators</span>=[<span style="color:#61afef;">DataRequired</span>()])<br>    rating = <span
+                style="color:#61afef;">SelectField</span>(<span style="color:#98c379;">'Coffee Rate'</span>, <span
+                style="color:#d19a66;">validators</span>=[<span style="color:#61afef;">DataRequired</span>()], <span
+                style="color:#d19a66;">choices</span>=[(<span style="color:#98c379;">'</span><span
+                style="color:#98c379;font-family:&#39;Courier New&#39;,monospace;">☕</span><span style="color:#98c379;">'</span>), (<span
+                style="color:#98c379;">'</span><span style="color:#98c379;font-family:&#39;Courier New&#39;,monospace;">☕☕</span><span
+                style="color:#98c379;">'</span>)])<br>    submit = <span style="color:#61afef;">SubmitField</span>(<span
+                style="color:#98c379;">'Submit'</span>)<br><br></pre></pre></pre>
+        <p>And here is how to pass the form and get hold of the input data (You can also use
+            'request.form.get("example")'):</p>
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><br><span
+                style="color:#e5c07b;">@app.route</span>(<span style="color:#98c379;">'/add'</span>, <span
+                style="color:#d19a66;">methods</span>=[<span style="color:#98c379;">'GET'</span>, <span
+                style="color:#98c379;">'POST'</span>])<br><span style="color:#c678dd;">def </span><span
+                style="color:#61afef;">add_cafe</span>():<br>    form = <span
+                style="color:#61afef;">CafeForm</span>()<br>    <span style="color:#c678dd;">if </span>form.<span
+                style="color:#61afef;">validate_on_submit</span>():<br>        <span style="color:#7f8591;">c </span>= form.cafe.data<br>        l = form.loc.data<br>        o = form.open.data<br>    <span
+                style="white-space:pre">	</span>return <span style="color: rgb(97, 175, 239);">redirect</span>(<span
+                style="color: rgb(97, 175, 239);">url_for</span>(<span style="color: rgb(152, 195, 121);">'home'</span>))</pre><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><span
+                style="color:#5c6370;">    </span><span style="color:#c678dd;">return </span><span
+                style="color:#61afef;">render_template</span>(<span style="color:#98c379;">'add.html'</span>, <span
+                style="color:#d19a66;">form</span>=form)</pre><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><br></pre></pre>
+        <p>For HTML page setup, you can use the manual way or use Flask-Bootstrap.&nbsp; Here are examples:</p>
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;">&lt;<span
+                style="color:#e06c75;">div </span><span style="color:#d19a66;">class</span><span style="color:#98c379;">="container"</span>&gt;<br>    &lt;<span
+                style="color:#e06c75;">h1</span>&gt;Login&lt;/<span style="color:#e06c75;">h1</span>&gt;<br><span
+                style="color:#5c6370;">&lt;!--    Manual way--&gt;<br></span><span style="color:#5c6370;">    </span>&lt;<span
+                style="color:#e06c75;">form </span><span style="color:#d19a66;">method</span><span
+                style="color:#98c379;">="POST" </span><span style="color:#d19a66;">action</span><span
+                style="color:#98c379;">={{url_for('login')}} </span><span
+                style="color:#d19a66;">novalidate</span>&gt;<br>        {{ form.csrf_token }}<br>        &lt;<span
+                style="color:#e06c75;">p</span>&gt;<br>            {{ form.email.label }}&lt;<span
+                style="color:#e06c75;">br</span>&gt; {{ form.email(size=30) }}<br>            {%for err in form.email.errors%}<br>            &lt;<span
+                style="color:#e06c75;">span</span>&gt;{{err}}&lt;/<span style="color:#e06c75;">span</span>&gt;<br>            {%endfor%}<br>        &lt;<span
+                style="color:#e06c75;">p</span>&gt;<br>            {{ form.password.label }}&lt;<span
+                style="color:#e06c75;">br</span>&gt; {{ form.password(size=30) }} &lt;<span
+                style="color:#e06c75;">br</span>&gt;<br>            {%for err in form.password.errors%}<br>            &lt;<span
+                style="color:#e06c75;">span</span>&gt;{{err}}&lt;/<span style="color:#e06c75;">span</span>&gt;<br>            {{ form.summit }}<br>            {%endfor%}<br>        &lt;/<span
+                style="color:#e06c75;">p</span>&gt;<br><br>    &lt;/<span
+                style="color:#e06c75;">form</span>&gt;<br><span style="color:#5c6370;">&lt;!--    Using flask-Bootsrap--&gt;<br></span><span
+                style="color:#5c6370;">    </span>{% from 'bootstrap5/form.html' import render_form %} <br><br>    {{ render_form(form) }}<br>&lt;/<span
+                style="color:#e06c75;">div</span>&gt;</pre>
+        <p>Make sure to Flask-Bootstrap docs:&nbsp; <a  target="_blank"  href="https://bootstrap-flask.readthedocs.io/en/stable/">https://bootstrap-flask.readthedocs.io/en/stable/</a>
+        </p>
+        <p>Some 'Validators' need to get installed separately such as email validator:(you also need to put it
+            separately in 'requirements.txt')</p>
+        <pre style="background-color:#282c34;color:#bbbbbb;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;">pip install email_validator<br></pre>
+        <p>PREFILLED FORM:</p>
+        <p>To present forms with some prerendered text in their fields, give the pre-info when you are making the form
+            object:</p>
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><pre
+                style="color: rgb(187, 187, 187); font-family: &quot;JetBrains Mono&quot;, monospace;"><span
+                style="color:#5c6370;font-style:italic;"># 1.<br></span>form = <span style="color:#61afef;">CreatePostForm</span>()<br>form.title.default = post.title<br>form.subtitle.default = post.subtitle<br><br><span
+                style="color:#5c6370;font-style:italic;"># 2. a less useful way<br></span>form = <span
+                style="color:#61afef;">CreatePostForm</span>(<br>    <span style="color:#d19a66;">title</span>=post.title,<br>    <span
+                style="color:#d19a66;">subtitle</span>=post.subtitle<br>)<br><br></pre></pre>
+
+    </section>
+    <section id="Flask(request)">
+        <hr>
+        <h3>Flask(request)</h3>
+        <p>By using flask.request you can get data from HTML pages to your python code.</p>
+        <p>FORMS: This is an example of getting data from a HTML form:</p>
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><br><span
+                style="color:#e5c07b;">@app.route</span>(<span style="color:#98c379;">"/add"</span>, <span
+                style="color:#d19a66;">methods</span>=[<span style="color:#98c379;">'POST'</span>, <span
+                style="color:#98c379;">'GET'</span>])<br><span style="color:#c678dd;">def </span><span
+                style="color:#61afef;">add</span>():<br>    <span
+                style="color:#c678dd;">if </span>request.method == <span style="color:#98c379;">"POST"</span>:   <span
+                style="color:#5c6370;">#IMPORTANT TO BE UPPERCASE.<br></span><span
+                style="color:#5c6370;">        </span><span style="color:#7f8591;">name </span>= request.form.get(<span
+                style="color:#98c379;">'name'</span>)     #more practical than the below line.<br>        <span
+                style="color:#7f8591;">author </span>= request.form[<span style="color:#98c379;">'author'</span>]<br>        <span
+                style="color:#c678dd;">return </span><span style="color:#61afef;">redirect</span>(<span
+                style="color:#61afef;">url_for</span>(<span style="color:#98c379;">'home'</span>))<br>     <span
+                style="color:#c678dd;">return </span><span style="color:#61afef;">render_template</span>(<span
+                style="color:#98c379;">'add.html'</span>)<br><br></pre></pre>
+        <p>&nbsp;in the HTML &lt;input&gt; tag you should add attribute 'name' equal to a name for the input, then you
+            can take it from the request method.</p>
+        <p><br></p>
+        <p>You can also get the data you pass to the 'url_for' method:</p>
+        <pre style="background-color: rgb(40, 44, 52); font-family: &quot;JetBrains Mono&quot;, monospace;"><span
+                style="color: rgb(171, 178, 191);"> <span style="color:#d19a66;">action</span>=<span
+                style="color:#d19a66;">url_for</span>(<span style="color:#98c379;">'edit'</span>, <span
+                style="color:#d19a66;">movie_id</span>=</span><font color="#d19a66">1</font><font
+                color="#abb2bf">)</font></pre>
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;">a = request.args.<span
+                style="color:#61afef;">get</span>(<span style="color:#98c379;">"movie_id"</span>)</pre><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><span style="color: rgb(86, 182, 194);">print</span>(a)</pre><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;">result &gt;&gt;&gt;&gt; 1</pre></pre>
+        <p><br></p>
+        <p>PASSING VARIABLES TO FLASK API:<br></p>
+        <p>Assume that we are going to pass 'name' and 'age' from URL. There are two ways of doing this. Look at the
+            URLs, then script:</p>
+        <pre class="brush: python; title: ; notranslate" title=""
+             style="border: 0px; margin-top: 0px; margin-bottom: 1.5em; padding: 20px; background: rgba(0, 0, 0, 0.05); font-family: inherit; font-size: 17px; line-height: normal; overflow: auto; max-width: 100%; box-sizing: border-box; color: rgb(61, 68, 89);"><span
+                style="font-family: inherit;">http://127.0.0.1:5000</span>/with_url_variables/Sergio/40</pre>
+        <pre class="brush: python; title: ; notranslate" title=""
+             style="border: 0px; margin-top: 0px; margin-bottom: 1.5em; padding: 20px; background: rgba(0, 0, 0, 0.05); font-family: inherit; font-size: 17px; line-height: normal; overflow: auto; max-width: 100%; box-sizing: border-box; color: rgb(61, 68, 89);"> http://127.0.0.1:5000/with_parameters?name=Sergio&amp;age=40</pre>
+        <pre style="background-color: rgb(40, 44, 52); font-family: &quot;JetBrains Mono&quot;, monospace;"><pre
+                style="color: rgb(171, 178, 191); font-family: &quot;JetBrains Mono&quot;, monospace;"><br><span
+                style="color:#e5c07b;">@app.route</span>(<span
+                style="color:#98c379;">'/with_parameters'</span>)<br><span style="color:#c678dd;">def </span><span
+                style="color:#61afef;">with_parameters</span>():<br>    name = request.args.<span
+                style="color:#61afef;">get</span>(<span style="color:#98c379;">'name'</span>)<br>    age = <span
+                style="color:#56b6c2;">int</span>(request.args.<span style="color:#61afef;">get</span>(<span
+                style="color:#98c379;">'age'</span>))<br>    <span style="color:#c678dd;">return </span><span
+                style="color:#61afef;">jsonify</span>(<span style="color:#d19a66;">message</span>=<span
+                style="color:#98c379;">"My name is " </span>+ name + <span style="color:#98c379;">" and I am " </span>+ <span
+                style="color:#56b6c2;">str</span>(age) + <span
+                style="color:#98c379;">" years old"</span>)<br><br><br><span
+                style="color:#e5c07b;">@app.route</span>(<span style="color:#98c379;">'/with_url_variables/&lt;string:name&gt;/&lt;int:age&gt;'</span>)<br><span
+                style="color:#c678dd;">def </span><span style="color:#61afef;">with_url_variables</span>(<span
+                style="color:#d19a66;">name</span>: <span style="color:#56b6c2;">str</span>, <span
+                style="color:#d19a66;">age</span>: <span style="color:#56b6c2;">int</span>):<br>    <span
+                style="color:#c678dd;">return </span><span style="color:#61afef;">jsonify</span>(<span
+                style="color:#d19a66;">message</span>=<span style="color:#98c379;">"My name is " </span>+ <span
+                style="color:#d19a66;">name </span>+ <span style="color:#98c379;">" and I am " </span>+ <span
+                style="color:#56b6c2;">str</span>(<span style="color:#d19a66;">age</span>) + <span
+                style="color:#98c379;">" years old"</span>)<br><br></pre></pre>
+
+
+    </section>
+
+    <section id="Flask-SQLAlchemy">
+        <hr>
+        <h3>Flask-SQLAlchemy</h3>
+        <p>This is a flask-based package for working with database files(*.db).<a  target="_blank" 
+                href="https://flask-sqlalchemy.palletsprojects.com/en/2.x/">Docs</a></p>
+        <p>&nbsp;The first step for initializing the database is to create a flask application and pass it to
+            the&nbsp;
+            database object:</p>
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><br><span
+                style="color:#c678dd;">from </span>flask <span style="color:#c678dd;">import </span>Flask<br><span
+                style="color:#c678dd;">from </span>flask_sqlalchemy <span style="color:#c678dd;">import </span>SQLAlchemy<br><br>app = <span
+                style="color:#61afef;">Flask</span>(__name__)<br>app.config[<span style="color:#98c379;">'SQLALCHEMY_DATABASE_URI'</span>] = <span
+                style="color:#98c379;">"sqlite:///new-books-collection.db"<br></span><span style="color:#5c6370;"># the line above determines the name of the database and its path. <br></span><span
+                style="color:#5c6370;"># this one is in the same path as python code.<br></span>app.config[<span
+                style="color:#98c379;">'SQLALCHEMY_TRACK_MODIFICATIONS'</span>] = <span style="color:#c678dd;">False<br></span>db = <span
+                style="color:#61afef;">SQLAlchemy</span>(app)<br><br></pre></pre>
+        <p>Next, a class works as a table; its attributes are the table's fields:</p>
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><br><span
+                style="color:#c678dd;">class </span><span
+                style="color:#e5c07b;">Book</span>(db.Model):<br>    id = db.<span style="color:#61afef;">Column</span>(db.Integer, <span
+                style="color:#d19a66;">primary_key</span>=<span style="color:#c678dd;">True</span>, <span
+                style="color:#d19a66;">nullable</span>=<span
+                style="color:#c678dd;">False</span>)<br>    title = db.<span
+                style="color:#61afef;">Column</span>(db.<span style="color:#61afef;">String</span>(<span
+                style="color:#d19a66;">250</span>), <span style="color:#d19a66;">unique</span>=<span
+                style="color:#c678dd;">True</span>, <span style="color:#d19a66;">nullable</span>=<span
+                style="color:#c678dd;">False</span>)<br>    author = db.<span
+                style="color:#61afef;">Column</span>(db.<span style="color:#61afef;">String</span>(<span
+                style="color:#d19a66;">250</span>), <span style="color:#d19a66;">unique</span>=<span
+                style="color:#c678dd;">False</span>, <span style="color:#d19a66;">nullable</span>=<span
+                style="color:#c678dd;">False</span>)<br>    rating = db.<span style="color:#61afef;">Column</span>(db.Float, <span
+                style="color:#d19a66;">unique</span>=<span style="color:#c678dd;">False</span>, <span
+                style="color:#d19a66;">nullable</span>=<span style="color:#c678dd;">False</span>)<br><br>    <span
+                style="color:#5c6370;"># Optional: this will allow each book object to be identified by its title when printed.<br></span><span
+                style="color:#5c6370;">    </span><span style="color:#c678dd;">def </span><span style="color:#61afef;">__repr__</span>(<span
+                style="color:#c678dd;">self</span>):<br>        <span style="color:#c678dd;">return </span><span
+                style="color:#98c379;">f'&lt;Book </span><span style="color:#56b6c2;">{</span><span
+                style="color:#c678dd;">self</span>.title<span style="color:#56b6c2;">}</span><span
+                style="color:#98c379;">&gt;'<br></span><span style="color:#98c379;"><br></span></pre>
+        <p>This line creates the database. Can be removed after the database was made.</p>
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><br><span
+                style="color:#c678dd;">with </span>app.<span
+                style="color:#61afef;">app_context</span>():<br>    db.<span
+                style="color:#61afef;">create_all</span>()<br><br></pre></pre>
+        <p>Create a new record:</p>
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><br>new_book = <span
+                style="color:#61afef;">Book</span>(<span style="color:#d19a66;">id</span>=<span
+                style="color:#d19a66;">1</span>, <span style="color:#d19a66;">title</span>=<span style="color:#98c379;">"Harry Potter"</span>, <span
+                style="color:#d19a66;">author</span>=<span style="color:#98c379;">"J. K. Rowling"</span>, <span
+                style="color:#d19a66;">rating</span>=<span style="color:#d19a66;">9.3</span>)<br><span
+                style="color:#5c6370;"># primary key (id) is optional and it is auto-generated.<br></span>db.session.<span
+                style="color:#61afef;">add</span>(new_book)<br>db.session.<span
+                style="color:#61afef;">commit</span>()<br><br></pre>
+        <p>Read records:</p>
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><br>a = Book.query.<span
+                style="color:#61afef;">get</span>(<span style="color:#d19a66;">1</span>)   <span style="color:#5c6370;">#just have to pass id to get()<br></span><span
+                style="color:#56b6c2;">print</span>(a.author)<br><br>result&gt;&gt;&gt;&gt; J. K. Rowling<br><br><br>a = Book.query.<span
+                style="color:#61afef;">filter_by</span>(<span style="color:#d19a66;">title </span>= <span
+                style="color:#98c379;">"Harry Potter"</span>).<span style="color:#61afef;">first</span>()<br><span
+                style="color:#56b6c2;">print</span>(a.author)<br><br>result&gt;&gt;&gt;&gt; J. K. Rowling<br><br><br>a = db.session.<span
+                style="color:#61afef;">query</span>(Book).<span style="color:#61afef;">all</span>()<br><span
+                style="color:#56b6c2;">print</span>(a)<br><br>result &gt;&gt;&gt;&gt; [&lt;Book Harry Potter&gt;, &lt;Book Time&gt;]<br><br><br>a = db.session.<span
+                style="color:#61afef;">query</span>(Book.author).<span style="color:#61afef;">all</span>()<br><span
+                style="color:#56b6c2;">print</span>(a)<br><br>result&gt;&gt;&gt;&gt; [(<span style="color:#98c379;">'J. K. Rowling'</span>,), (<span
+                style="color:#98c379;">'Stephen Hawking'</span>,)]<br><br></pre>
+        <p>Possibilities for the reading records are high, try using for loops, etc.</p>
+        <p>Updating a record:</p>
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><br>book_id = <span
+                style="color:#d19a66;">1<br></span>book_to_update = Book.query.<span style="color:#61afef;">get</span>(book_id)<br>book_to_update.title = <span
+                style="color:#98c379;">"Harry Potter and the Goblet of Fire"<br></span>db.session.<span
+                style="color:#61afef;">commit</span>()<br><br><br>book_to_update = Book.query.<span
+                style="color:#61afef;">filter_by</span>(<span style="color:#d19a66;">title</span>=<span
+                style="color:#98c379;">"Harry Potter"</span>).<span style="color:#61afef;">first</span>()<br>book_to_update.title = <span
+                style="color:#98c379;">"Harry Potter and the Chamber of Secrets"<br></span>db.session.<span
+                style="color:#61afef;">commit</span>() <br><br></pre>
+        <p>Deleting a record:</p>
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><br>book_id = <span
+                style="color:#d19a66;">1<br></span>book_to_delete = Book.query.<span style="color:#61afef;">get</span>(book_id)<br>db.session.<span
+                style="color:#61afef;">delete</span>(book_to_delete)<br>db.session.<span
+                style="color:#61afef;">commit</span>()<br><br></pre>
+        <p>You can also delete by querying for a particular value e.g. by title or one of the other properties.</p>
+        <p><br></p>
+        <p>MAKING A PYTHON DICT. OUT OF SQL OBJECT:</p>
+        <p>First, we choose the record that we want, then use&nbsp; __dict__ method. it's important to delete
+            'sa_instance_state' which tells 'it ia a SQL object.'</p>
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><br>search_cafes = Cafe.query.<span
+                style="color:#61afef;">filter_by</span>(<span style="color:#d19a66;">location</span>=loc).<span
+                style="color:#61afef;">first</span>()<br><span style="color:#c678dd;">del </span>search_cafes.<span
+                style="color:#e06c75;">__dict__</span>[<span style="color:#98c379;">"_sa_instance_state"</span>]<br>cafe_dict =  search_cafes.<span
+                style="color:#e06c75;">__dict__<br></span><span
+                style="color:#c678dd;">return </span>jsonify(cafe_dict)<br>        <br>        </pre>
+        <p><br></p>
+        <p>ONE-TO-MANY RELATION IN FLASK_SQLAlCHEMY:&nbsp; &nbsp; <a  target="_blank" 
+                href="https://flask-sqlalchemy.palletsprojects.com/en/2.x/models/">docs</a>&nbsp; <a  target="_blank" 
+                href="https://www.digitalocean.com/community/tutorials/how-to-use-one-to-many-database-relationships-with-flask-sqlalchemy">example</a>
+        </p>
+        <p>There are times when you need to connect different tables of a database together and access one from another,
+            here is when relations come.</p>
+        <p>Here is an example:</p>
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><br><span
+                style="color:#c678dd;">class </span><span
+                style="color:#e5c07b;">UserData</span>(db.Model, UserMixin):<br>    __tablename__ = <span
+                style="color:#98c379;">"userstable"<br></span><span style="color:#98c379;">    </span>id = db.<span
+                style="color:#61afef;">Column</span>(db.Integer, <span style="color:#d19a66;">primary_key</span>=<span
+                style="color:#c678dd;">True</span>)<br>    password = db.<span
+                style="color:#61afef;">Column</span>(db.<span style="color:#61afef;">String</span>(<span
+                style="color:#d19a66;">250</span>), <span style="color:#d19a66;">nullable</span>=<span
+                style="color:#c678dd;">False</span>)<br>    name = db.<span
+                style="color:#61afef;">Column</span>(db.<span style="color:#61afef;">String</span>(<span
+                style="color:#d19a66;">250</span>), <span style="color:#d19a66;">nullable</span>=<span
+                style="color:#c678dd;">False</span>)<br>    blog_posts = db.<span
+                style="color:#61afef;">relationship</span>(<span style="color:#98c379;">"BlogPost"</span>, <span
+                style="color:#d19a66;">backref</span>=<span
+                style="color:#98c379;">'user'</span>)<br>    comments = db.<span
+                style="color:#61afef;">relationship</span>(<span style="color:#98c379;">"Comments"</span>, <span
+                style="color:#d19a66;">backref</span>=<span style="color:#98c379;">'user'</span>)<br><br><br><span
+                style="color:#c678dd;">class </span><span style="color:#e5c07b;">BlogPost</span>(db.Model):<br>    __tablename__ = <span
+                style="color:#98c379;">"blog_posts"<br></span><span
+                style="color:#98c379;">    </span>author_id = db.<span style="color:#61afef;">Column</span>(db.Integer, db.<span
+                style="color:#61afef;">ForeignKey</span>(<span style="color:#98c379;">'userstable.id'</span>))<br>    id = db.<span
+                style="color:#61afef;">Column</span>(db.Integer, <span style="color:#d19a66;">primary_key</span>=<span
+                style="color:#c678dd;">True</span>)<br>    title = db.<span
+                style="color:#61afef;">Column</span>(db.<span style="color:#61afef;">String</span>(<span
+                style="color:#d19a66;">250</span>), <span style="color:#d19a66;">unique</span>=<span
+                style="color:#c678dd;">True</span>, <span style="color:#d19a66;">nullable</span>=<span
+                style="color:#c678dd;">False</span>)<br>    body = db.<span style="color:#61afef;">Column</span>(db.Text, <span
+                style="color:#d19a66;">nullable</span>=<span style="color:#c678dd;">False</span>)<br>    post_comments = db.<span
+                style="color:#61afef;">relationship</span>(<span style="color:#98c379;">"Comments"</span>, <span
+                style="color:#d19a66;">backref</span>=<span style="color:#98c379;">'post'</span>)<br><br><br><span
+                style="color:#c678dd;">class </span><span style="color:#e5c07b;">Comments</span>(db.Model):<br>    __tablename__ = <span
+                style="color:#98c379;">"comments"<br></span><span style="color:#98c379;">    </span>id = db.<span
+                style="color:#61afef;">Column</span>(db.Integer, <span style="color:#d19a66;">primary_key</span>=<span
+                style="color:#c678dd;">True</span>)<br>    comment_body = db.<span style="color:#61afef;">Column</span>(db.Text, <span
+                style="color:#d19a66;">nullable</span>=<span style="color:#c678dd;">False</span>)<br>    writer_id = db.<span
+                style="color:#61afef;">Column</span>(db.Integer, db.<span style="color:#61afef;">ForeignKey</span>(<span
+                style="color:#98c379;">'userstable.id'</span>))<br>    post_id = db.<span
+                style="color:#61afef;">Column</span>(db.Integer, db.<span style="color:#61afef;">ForeignKey</span>(<span
+                style="color:#98c379;">'blog_posts.id'</span>))<br><br></pre>
+
+
+        <span style="font-size: 20.8px;">Notes: in this example, we have connected the user to his posts and his comments, and also we have related the posts to their comments and vice versa.</span>
+        <div><span style="font-size: 20.8px;">'db.Relationship' won't make a new column in its table but it connects with 'db.ForeignKey' in other tables columns.</span>
+        </div>
+        <div><span style="font-size: 20.8px;">look at these relationships:</span></div>
+        <div><span style="font-size: 20.8px;">&nbsp; &nbsp; &nbsp;</span><span
+                style="color: rgb(229, 192, 123); background-color: rgb(40, 44, 52); font-family: &quot;JetBrains Mono&quot;, monospace;">UserData</span><span
+                style="font-size: 20.8px;">: Parent&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span
+                style="color: rgb(229, 192, 123); background-color: rgb(40, 44, 52); font-family: &quot;JetBrains Mono&quot;, monospace;">BlogPost</span><span
+                style="font-size: 20.8px;">&nbsp;and&nbsp;</span><span
+                style="color: rgb(229, 192, 123); background-color: rgb(40, 44, 52); font-family: &quot;JetBrains Mono&quot;, monospace;">Comments</span><span
+                style="font-size: 20.8px;">&nbsp;: Children</span></div>
+        <div><span style="font-size: 20.8px;">&nbsp; &nbsp; &nbsp;</span><span
+                style="color: rgb(229, 192, 123); font-family: &quot;JetBrains Mono&quot;, monospace; background-color: rgb(40, 44, 52);">BlogPost</span><span
+                style="font-size: 20.8px;">: Parent&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span
+                style="color: rgb(229, 192, 123); background-color: rgb(40, 44, 52); font-family: &quot;JetBrains Mono&quot;, monospace;">Comments</span><span
+                style="font-size: 20.8px;">&nbsp;: Child</span></div>
+        <div><span style="font-size: 20.8px;"><br></span></div>
+        <div><span style="font-size: 20.8px;">'db.Relationship' first argument is going to be the class name we want to connect with.&nbsp;</span><span
+                style="color: rgb(209, 154, 102); background-color: rgb(40, 44, 52); font-family: &quot;JetBrains Mono&quot;, monospace;">backref</span><span
+                style="font-size: 20.8px;">&nbsp;or backreference is used when we want to have access to a parent table from a child table (examples will be discussed later).</span>
+        </div>
+        <div><span style="font-size: 20.8px;"><br></span></div>
+        <div><span style="font-size: 20.8px;">'db.ForeignKey' first argument is going to link a child to a parent and it's the primary key of a row in the parent's table.</span>
+        </div>
+        <div><br></div>
+        <div><span style="font-size: 20.8px;">Going from parent to child and child to parent :&nbsp;</span></div>
+        <div>
+            <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><pre
+                    style="font-family: &quot;JetBrains Mono&quot;, monospace;"># Parent &gt;&gt; Child</pre><pre
+                    style="font-family: &quot;JetBrains Mono&quot;, monospace;">BlogPost.query.<span
+                    style="color:#61afef;">get</span>(<span style="color:#d19a66;">post_id</span>).post_comment[<span
+                    style="color: rgb(209, 154, 102);">0</span>].comment_body <span style="color: rgb(92, 99, 112);"># gives us all comments for the selected post.</span></pre><pre
+                    style="font-family: &quot;JetBrains Mono&quot;, monospace;"><br></pre><pre
+                    style="font-family: &quot;JetBrains Mono&quot;, monospace;"># Child &gt;&gt; Parent<br></pre><pre
+                    style="font-family: &quot;JetBrains Mono&quot;, monospace;">BlogPost.query.<span
+                    style="color:#61afef;">get</span>(<span style="color:#d19a66;">post_id</span>).user.name   <span
+                    style="color:#5c6370;"># here is when we need backref.</span></pre><pre
+                    style="font-family: &quot;JetBrains Mono&quot;, monospace;"><br></pre><pre
+                    style="font-family: &quot;JetBrains Mono&quot;, monospace;"># Combinatory</pre><pre
+                    style="font-family: &quot;JetBrains Mono&quot;, monospace;">BlogPost.query.<span
+                    style="color: rgb(97, 175, 239);">get</span>(<span style="color: rgb(209, 154, 102);">post_id</span>).post_comment[<span
+                    style="color: rgb(209, 154, 102);">0</span>].user.name</pre><pre
+                    style="font-family: &quot;JetBrains Mono&quot;, monospace;"><br></pre></pre>
+        </div>
+        <div><span style="font-size: 20.8px;"><br></span></div>
+        <div><span style="font-size: 20.8px;">Adding data to the tables:</span></div>
+        <div><span style="font-size: 20.8px;">Attention: in&nbsp;</span><span
+                style="color: rgb(229, 192, 123); background-color: rgb(40, 44, 52); font-family: &quot;JetBrains Mono&quot;, monospace;">Comments</span><span
+                style="font-size: 20.8px;">&nbsp;table you shouldn't give data to '</span><span
+                style="background-color: rgb(40, 44, 52); color: rgb(171, 178, 191); font-family: &quot;JetBrains Mono&quot;, monospace;">writer_id</span><span
+                style="font-size: 20.8px;">' and '</span><span
+                style="background-color: rgb(40, 44, 52); color: rgb(171, 178, 191); font-family: &quot;JetBrains Mono&quot;, monospace;">post_id</span><span
+                style="font-size: 20.8px;">', but give data to their foreign key backreference.</span></div>
+        <div>
+            <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><br>new_comment = <span
+                    style="color:#61afef;">Comments</span>(<span style="color:#d19a66;">comment_body</span>=form.body.data, <span
+                    style="color:#d19a66;">user</span>=current_user, <span style="color:#d19a66;">post</span>=requested_post)<br>db.session.<span
+                    style="color:#61afef;">add</span>(new_comment)<br>db.session.<span
+                    style="color:#61afef;">commit</span>()</pre>
+        </div>
+        <p><br></p>
+        <p>Making Database Table Classes In Another Python Module:</p>
+        <pre style="background-color:#282c34;color:#bbbbbb;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><br><span
+                style="color:#5c6370;font-style:italic;"># database.py<br></span><span
+                style="color:#5c6370;font-style:italic;"><br></span><span
+                style="color:#d55fde;font-style:italic;">from </span>flask_sqlalchemy <span
+                style="color:#d55fde;font-style:italic;">import </span>SQLAlchemy<br><span
+                style="color:#d55fde;font-style:italic;">from </span>flask_login <span
+                style="color:#d55fde;font-style:italic;">import </span>UserMixin<br><br>db = <span
+                style="color:#61afef;">SQLAlchemy</span>()<br><br><br><span style="color:#d55fde;font-style:italic;">class </span><span
+                style="color:#e5c07b;">User</span>(db.Model, UserMixin):<br>    id = db.<span style="color:#61afef;">Column</span>(db.Integer, <span
+                style="color:#d19a66;">primary_key</span>=<span
+                style="color:#d55fde;font-style:italic;">True</span>)<br>    username = db.<span style="color:#61afef;">Column</span>(db.<span
+                style="color:#61afef;">String</span>(<span style="color:#d19a66;">80</span>), <span
+                style="color:#d19a66;">unique</span>=<span style="color:#d55fde;font-style:italic;">True</span>, <span
+                style="color:#d19a66;">nullable</span>=<span style="color:#d55fde;font-style:italic;">False</span>)<br>    email = db.<span
+                style="color:#61afef;">Column</span>(db.<span style="color:#61afef;">String</span>(<span
+                style="color:#d19a66;">120</span>), <span style="color:#d19a66;">unique</span>=<span
+                style="color:#d55fde;font-style:italic;">True</span>, <span style="color:#d19a66;">nullable</span>=<span
+                style="color:#d55fde;font-style:italic;">False</span>)</pre>
+        <pre style="background-color:#282c34;color:#bbbbbb;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><br><span
+                style="color:#5c6370;font-style:italic;"># app.py</span></pre><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><span
+                style="color:#5c6370;font-style:italic;"><br></span><span
+                style="color:#d55fde;font-style:italic;">from </span>flask <span
+                style="color:#d55fde;font-style:italic;">import </span>Flask<br><span
+                style="color:#d55fde;font-style:italic;">from </span>database <span
+                style="color:#d55fde;font-style:italic;">import </span>User, db<br><br>app = <span
+                style="color:#61afef;">Flask</span>(__name__)<br>app.config[<span style="color:#89ca78;">'SQLALCHEMY_DATABASE_URI'</span>] = <span
+                style="color:#89ca78;">'sqlite:////tmp/test.db'<br></span>db.<span
+                style="color:#61afef;">init_app</span>(app)<br><br><span style="color:#5c6370;font-style:italic;"># Create database tables<br></span><span
+                style="color:#d55fde;font-style:italic;">with </span>app.<span style="color:#61afef;">app_context</span>():<br>    db.<span
+                style="color:#61afef;">create_all</span>()<br>    </pre></pre>
+    </section>
+</section>
+<!--Python Mechanisms-->
+<section id="Python-Mechanisms"><h1>Python Mechanisms</h1>
+    <hr>
+
+
+    <section id="get hold of values of Function variables(local) and nested functions">
+        <hr>
+        <h3>Get hold of values of Function variables(local) and nested functions</h3>
+        <p>You can not hold function variables in the way we behave with class variables(attributes):</p>
+        <pre style="background-color: rgb(40, 44, 52); font-family: &quot;JetBrains Mono&quot;, monospace; color: rgb(171, 178, 191);"><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><span
+                style="color:#c678dd;">class </span><span style="color:#e5c07b;">Class1</span>:<br><br>    <span
+                style="color:#c678dd;">def </span><span style="color:#61afef;">__init__</span>(<span
+                style="color:#c678dd;">self</span>):<br>        <span style="color:#c678dd;">self</span>.name = <span
+                style="color:#c678dd;">None<br></span><span style="color:#c678dd;">        self</span>.age = <span
+                style="color:#c678dd;">None<br></span><span style="color:#c678dd;">        self</span>.<span
+                style="color:#61afef;">fun1</span>()<br><br>    <span style="color:#c678dd;">def </span><span
+                style="color:#61afef;">fun1</span>(<span style="color:#c678dd;">self</span>):<br>        <span
+                style="color:#c678dd;">self</span>.name = <span style="color:#98c379;">'Ali'<br></span><span
+                style="color:#98c379;">        </span><span style="color:#c678dd;">self</span>.age = <span
+                style="color:#d19a66;">20<br></span><span style="color:#d19a66;"><br></span><span
+                style="color:#56b6c2;">print</span>(<span style="color:#61afef;">Class1</span>().name)<br><br>result&gt;&gt;&gt;&gt; Ali</pre><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><br></pre></pre>
+        <pre style="background-color: rgb(40, 44, 52); font-family: &quot;JetBrains Mono&quot;, monospace; color: rgb(171, 178, 191);"><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><span
+                style="color:#c678dd;">def </span><span style="color:#61afef;">fun1</span>():<br>    <span
+                style="color:#7f8591;">name </span>= <span style="color:#98c379;">'Ali'<br></span><span
+                style="color:#98c379;">    </span><span style="color:#7f8591;">age </span>= <span
+                style="color:#d19a66;">20</span></pre><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><span
+                style="color:#d19a66;"><br></span><span style="color:#56b6c2;">print</span>(<span
+                style="color:#61afef;">fun1</span>().name)<br><br>result&gt;&gt;&gt;&gt; AttributeError: <span
+                style="color:#e5c07b;">'NoneType' </span><span
+                style="color:#56b6c2;">object </span>has no attribute <span style="color:#98c379;">'name'</span></pre><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><span
+                style="color:#98c379;"><br></span></pre></pre>
+        <p>instead, you can use these ways:</p>
+        <pre style="background-color: rgb(40, 44, 52); font-family: &quot;JetBrains Mono&quot;, monospace; color: rgb(171, 178, 191);"><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><span
+                style="color:#c678dd;">def </span><span style="color:#61afef;">fun1</span>():<br>    name = <span
+                style="color:#98c379;">'Ali'<br></span><span style="color:#98c379;">    </span>age = <span
+                style="color:#d19a66;">20<br></span><span style="color:#d19a66;">    </span><span
+                style="color:#c678dd;">return </span>age, name<br><br>age, name = <span
+                style="color:#61afef;">fun1</span>()<br><span style="color:#56b6c2;">print</span>(name)<br><br>result&gt;&gt;&gt;&gt; Ali</pre><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><br></pre><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><span
+                style="color:#c678dd;">def </span><span style="color:#61afef;">fun1</span>():<br>    name = <span
+                style="color:#98c379;">'Ali'<br></span><span style="color:#98c379;">    </span>age = <span
+                style="color:#d19a66;">20<br></span><span style="color:#d19a66;">    </span><span
+                style="color:#c678dd;">return </span>age, name<br><br>a = <span
+                style="color:#61afef;">fun1</span>()  <span style="color:#5c6370;"># this gives us a tuple made of (age , name)<br></span><span
+                style="color:#56b6c2;">print</span>(a[<span style="color:#d19a66;">1</span>])<br><br>result&gt;&gt;&gt;&gt; Ali</pre><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><br></pre><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><span
+                style="color: rgb(198, 120, 221);">def </span><span style="color: rgb(97, 175, 239);">fun1</span>():<br></pre><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;">    fun1.<span
+                style="color:#7f8591;">name </span>= <span style="color:#98c379;">'ali'<br></span><span
+                style="color:#98c379;">    </span>fun1.age = <span style="color: rgb(209, 154, 102);">20</span></pre><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><br><span style="color:#61afef;">fun1</span>()<br><span
+                style="color:#56b6c2;">print</span>(fun1.name)<br><br>result&gt;&gt;&gt;&gt; Ali</pre><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><br></pre></pre>
+        <p>and here is how to hold values from nested functions:</p>
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><span
+                style="color:#c678dd;">def </span><span style="color:#61afef;">fun1</span>():<br>    <span
+                style="color:#c678dd;">def </span><span style="color:#61afef;">name</span>():<br>        <span
+                style="color:#c678dd;">return </span><span style="color:#98c379;">'Ali'<br></span><span
+                style="color:#98c379;">    </span><span style="color:#c678dd;">def </span><span style="color:#61afef;">age</span>():<br>        <span
+                style="color:#c678dd;">return </span><span style="color:#d19a66;">20<br></span><span
+                style="color:#d19a66;">    </span>fun1.age = age<br>    fun1.name = name<br><br><br><span
+                style="color:#61afef;">fun1</span>()<br><span style="color:#56b6c2;">print</span>(fun1.<span
+                style="color:#61afef;">name</span>())<br><br>result&gt;&gt;&gt;&gt; Ali</pre>
+
+    </section>
+
+    <section id="Python Decorators">
+        <hr>
+        <h3>Python Decorators</h3>
+        <p>Decorators are a very powerful and useful tool in Python since it allows programmers to modify the
+            behavior
+            of a function or class. Decorators allow us to wrap another function in order to extend the behavior of
+            the
+            wrapped function.</p>
+        <p>decorator function itself needs to get a function in the argument's place. wrapper function takes the
+            same
+            arguments as the wrapped function. then we just write the the name of the decorator above the function
+            name
+            with a '@' to work.</p>
+
+        <p>This decorator gets the function and its arguments, then gives out the function's name and then
+            initializes
+            it:</p>
+        <pre style="background-color: rgb(40, 44, 52); font-family: &quot;JetBrains Mono&quot;, monospace; color: rgb(171, 178, 191);"><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><br><span style="color:#c678dd;">def </span><span
+                style="color:#61afef;">decorator</span>(<span style="color:#d19a66;">function</span>):<br>    <span
+                style="color:#c678dd;">def </span><span style="color:#61afef;">wrapper</span>(<span
+                style="color:#d19a66;">*args</span>):<br>        <span style="color:#56b6c2;">print</span>(<span
+                style="color:#98c379;">f'</span><span style="color:#56b6c2;">{</span><span style="color:#d19a66;">function</span>.<span
+                style="color:#e06c75;">__name__</span><span style="color:#56b6c2;">}{</span><span
+                style="color:#d19a66;">args</span><span style="color:#56b6c2;">}</span><span
+                style="color:#98c379;">'</span>)<br>        <span style="color:#d19a66;">function</span>(*<span
+                style="color:#d19a66;">args</span>)<br>    <span
+                style="color:#c678dd;">return </span>wrapper<br><br><br><span
+                style="color:#e5c07b;">@decorator<br></span><span style="color:#c678dd;">def </span><span
+                style="color:#61afef;">a_func</span>(<span style="color:#d19a66;">*args</span>):<br>    <span
+                style="color:#56b6c2;">print</span>(<span style="color:#56b6c2;">sum</span>(<span
+                style="color:#d19a66;">args</span>))<br><br><br><span style="color:#61afef;">a_func</span>(<span
+                style="color:#d19a66;">1</span>, <span
+                style="color:#d19a66;">2</span>)<br><br>result &gt;&gt;&gt;&gt;<br><span
+                style="color:#61afef;">a_func</span>(<span style="color:#d19a66;">1</span>, <span
+                style="color:#d19a66;">2</span>)<br><span style="color:#d19a66;">3<br></span><span
+                style="color:#d19a66;"><br></span></pre></pre>
+        <p>This is a bit complicated version :</p>
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><br><span
+                style="color:#c678dd;">class </span><span style="color:#e5c07b;">User</span>:<br>    <span
+                style="color:#c678dd;">def </span><span style="color:#61afef;">__init__</span>(<span
+                style="color:#c678dd;">self</span>, <span style="color:#d19a66;">name</span>):<br>        <span
+                style="color:#c678dd;">self</span>.name = <span style="color:#d19a66;">name<br></span><span
+                style="color:#d19a66;">        </span><span style="color:#c678dd;">self</span>.is_logged_in = <span
+                style="color:#c678dd;">False<br></span><span style="color:#c678dd;"><br></span><span
+                style="color:#c678dd;"><br></span><span style="color:#c678dd;">def </span><span style="color:#61afef;">is_authenticated_decorator</span>(<span
+                style="color:#d19a66;">function</span>):<br>    <span style="color:#c678dd;">def </span><span
+                style="color:#61afef;">wrapper</span>(<span style="color:#d19a66;">*args</span>, <span
+                style="color:#7f8591;">**kwargs</span>):<br>        <span style="color:#c678dd;">if </span><span
+                style="color:#d19a66;">args</span>[<span style="color:#d19a66;">0</span>].is_logged_in == <span
+                style="color:#c678dd;">True</span>:<br>            <span style="color:#61afef;">function</span>(<span
+                style="color:#d19a66;">args</span>[<span style="color:#d19a66;">0</span>])<br>    <span
+                style="color:#c678dd;">return </span>wrapper<br><br><br><span style="color:#e5c07b;">@ is_authenticated_decorator<br></span><span
+                style="color:#c678dd;">def </span><span style="color:#61afef;">creat_post</span>(<span
+                style="color:#d19a66;">user</span>):<br>    <span style="color:#56b6c2;">print</span>(<span
+                style="color:#98c379;">f"This is </span><span style="color:#56b6c2;">{</span><span
+                style="color:#d19a66;">user</span>.name<span style="color:#56b6c2;">}</span><span
+                style="color:#98c379;">'s new post"</span>)<br><br><br>user = <span
+                style="color:#61afef;">User</span>(<span
+                style="color:#98c379;">'Ali'</span>)<br>user.is_logged_in = <span style="color:#c678dd;">True<br></span><span
+                style="color:#61afef;">creat_post</span>(user)<br><br>result &gt;&gt;&gt;&gt; This <span
+                style="color:#c678dd;">is </span>Ali<span style="color:#98c379;">'s new post<br></span><span
+                style="color:#98c379;"><br></span></pre>
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"></pre>
+        <span style="font-size: 20.8px;"><br></span>
+        <span style="font-size: 20.8px;"><br></span>
+        <span style="font-size: 20.8px;">MAKE DECORATORS BETTER WITH functool.warps:</span>
+        <span style="font-size: 20.8px;"><br></span>
+        <span style="font-size: 20.8px;">By adding '@warps(function)' to your decorators, all the properties of the original function. it won't do anything to any of the function's operation. it is better to always put it there.</span>
+
+        <br>
+
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><br><span
+                style="color:#c678dd;">def </span><span style="color:#61afef;">decorator</span>(<span
+                style="color:#d19a66;">function</span>):<br><span style="color:#5c6370;">    </span><span
+                style="color:#c678dd;">def </span><span style="color:#61afef;">wrapper</span>(<span
+                style="color:#d19a66;">*args</span>):<br>        <span style="color:#d19a66;">function</span>(*<span
+                style="color:#d19a66;">args</span>)<br>    <span style="color:#c678dd;">return </span>wrapper<br><br><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><span style="color:#e5c07b;">@decorator<br></span><span
+                style="color:#c678dd;">def </span><span style="color:#61afef;">a_func</span>(<span
+                style="color:#7f8591;">*args</span>):<br>    <span style="color:#c678dd;">pass<br></span></pre><br><span
+                style="color:#56b6c2;">print</span>(a_func.<span style="color:#e06c75;">__name__</span>)<br><br><br>result &gt;&gt;&gt;&gt;     wrapper<br><br><span
+                style="color:#5c6370;"><br></span></pre>
+
+
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><br><span
+                style="color:#c678dd;">from </span>functools <span style="color:#c678dd;">import </span>wraps    ###<br><br><br><span
+                style="color:#c678dd;">def </span><span style="color:#61afef;">decorator</span>(<span
+                style="color:#d19a66;">function</span>):<br>    <span style="color:#e5c07b;">@wraps</span>(<span
+                style="color:#d19a66;">function</span>)    ###<br>    <span style="color:#c678dd;">def </span><span
+                style="color:#61afef;">wrapper</span>(<span style="color:#d19a66;">*args</span>):<br>        <span
+                style="color:#61afef;">function</span>(*<span style="color:#d19a66;">args</span>)<br>    <span
+                style="color:#c678dd;">return </span>wrapper<br><br><br><span
+                style="color:#e5c07b;">@decorator<br></span><span style="color:#c678dd;">def </span><span
+                style="color:#61afef;">a_func</span>(<span style="color:#7f8591;">*args</span>):<br>    <span
+                style="color:#c678dd;">pass<br></span><span style="color:#c678dd;"><br></span><span
+                style="color:#56b6c2;">print</span>(a_func.<span style="color:#e06c75;">__name__</span>)<br><br>result &gt;&gt;&gt;&gt;    a_func <br><br></pre>
+
+    </section>
+</section>
+<!--Programming Mechanisms-->
+<section id="Programming-Mechanisms"><h1>Programming Mechanisms</h1>
+    <hr>
+    <section id="Terminal Commands">
+        <hr>
+        <h3>Terminal Commands</h3>
+        <p>There are 3 types of Terminals: Bash (used in Linux and macOS and also Linux-based websites), CMD
+            (windows
+            default), PowerShell (a more
+            powerful tool on windows).</p>
+
+    </section>
+
+    <section id="Github">
+        <hr>
+        <h3>GitHub</h3>
+        <p>DELETING SENSITIVE DATA FROM GITHUB COMMITS:</p>
+        <p>Commits always take a record of what you have done to your repository and if you delete a password, they
+            still can be seen in commits. One way to retouch commits is to use BFG Repo-Cleaner. the following codes
+            should be written in the Bash terminal. First You should have installed "Java", then download "bfg.jar"
+            file."I placed it in /c/DEVELOPMENT."&nbsp; &nbsp; &nbsp; <a  target="_blank" 
+                    href="https://rtyley.github.io/bfg-repo-cleaner/">Docs</a></p>
+        <p>1 . Make a&nbsp; text file of the passwords you want to delete from commits. "p.txt" "each line, one
+            password"</p>
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><br><span
+                style="color:#c678dd;">8BYkEfBA6O6donzWlSihBXox7C0sKR6b<br></span><span
+                style="color:#c678dd;">  <br></span></pre>
+        <span style="font-size: 20.8px;">2 . Make a clone of the repository.&nbsp;</span>
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><br><span
+                style="color:#c678dd;">FaMiLy</span>@DESKTOP-8OKIJ2K MINGW64 ~/Documents/GitHub<br>$ <span
+                style="color:#c678dd;">git clone </span>https://github.com/Id-Dark-Dragon/website.git<br><br></pre></pre>
+        <span style="font-size: 20.8px;">3 . Using a command line to replace texts in p.txt by "--REMOVED--" on commits.</span>
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><br><span
+                style="color:#c678dd;">FaMiLy</span>@DESKTOP-8OKIJ2K MINGW64 /c/DEVELOPMENT<br>$ <span
+                style="color:#c678dd;">java </span>-<span style="color:#c678dd;">jar bfg.jar </span>--r<span
+                style="color:#c678dd;">eplace-text </span>"E:\<span style="color:#c678dd;">PRJ</span>\<span
+                style="color:#c678dd;">p.txt</span>" "C:\<span style="color:#c678dd;">Users</span>\<span
+                style="color:#c678dd;">FaMiLy</span>\<span style="color:#c678dd;">Documents</span>\<span
+                style="color:#c678dd;">GitHub</span>\<span
+                style="color:#c678dd;">website</span>\.git"<br><br></pre></pre>
+        <span style="font-size: 20.8px;">4 . Go to .git and force push it to GitHub.</span>
+        <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><pre
+                style="font-family: &quot;JetBrains Mono&quot;, monospace;"><br><span
+                style="color:#c678dd;">FaMiLy</span>@DESKTOP-8OKIJ2K MINGW64 ~/Documents/GitHub/website/.git (GIT_DIR!)<br>$ <span
+                style="color:#c678dd;">git push origin </span>--f<span style="color:#c678dd;">orce </span>--a<span
+                style="color:#c678dd;">ll<br></span><span style="color:#c678dd;"><br></span></pre></pre>
+        <span style="font-size: 20.8px;">5 . Replace the new ".git" with the old one in your project folder, you may encounter a "detached HEAD" error after you want to do a new commit and push. If so, check out the master branch (you should be on the new master branch after doing this):</span>
+    </section>
+    <pre style="background-color:#282c34;color:#abb2bf;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:۹٫۸pt;"><br><span
+            style="color:#c678dd;">FaMiLy</span>@DESKTOP-8OKIJ2K MINGW64 /e/PRJ ((5a31911...))<br>$ <span
+            style="color:#c678dd;">git checkout master                                                                                                                                                                  </span><br><br></pre>
+</section>
+
+<br>
+<br>
+<hr>
+<section id="footer">
+    <hr>
+    <p style="text-align: center">By Ehsan Rahmani</p>
+
+
+</section>
+<script>
+    function darkMode() {
+        var element = document.body;
+        var content = document.getElementById("DarkModetext");
+        element.className = "dark-mode";
+        content.innerText = "Dark Mode is ON";
+    }
+
+    function lightMode() {
+        var element = document.body;
+        var content = document.getElementById("DarkModetext");
+        element.className = "light-mode";
+        content.innerText = "Dark Mode is OFF";
+    }
+
+    // Get the button:
+    let mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+        scrollFunction()
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+</script>
+
+
+</body>
+</html>
